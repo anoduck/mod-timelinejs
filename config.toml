@@ -4,6 +4,13 @@
     min = "0.110.0"
     max = ""
   [[module.mounts]]
+    source = "dist/timeline.js"
+    target = "assets/js/modules/timeline/timeline.js"
+  [[module.mounts]]
+    source = "dist"
+    target = "assets/scss"
+    includeFiles = "timeline.scss"
+  [[module.mounts]]
     source = 'layouts'
     target = 'layouts'
   [[module.mounts]]

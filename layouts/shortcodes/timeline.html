@@ -1,0 +1,30 @@
+{{/* Set Variables to be used in the shorcode */}}
+{{/* Personal CheatSheat https://anoduck.github.io/wiki/hugo */}}
+{{- $blockId := .Get "blockId" -}}
+{{- $jsonFile := .Get "jsonFile" -}}
+
+{{/* This "Div" element is where the timeline will be rendered on page. */}}
+{{ with $blockId }}
+<div id="{{ . }}" style="width: 100%; height: 600px"></div>
+{{ end }}
+
+{{/* This script should be rendered directly after the div tag. */}}
+<script>
+{{/* This defines Options for the timeline */}}
+var additionalOptions = {
+    // Some Options go here.
+    is_embed: true
+}
+
+{{/* This instantiates the timeline */}}
+document.addEventListener("DOMContentLoaded", function() {
+    window.timeline = new TL.Timeline(
+        {{ with $blockId }}
+        '{{ . }}',
+        {{ end }}
+        {{ with $jsonFile }}
+        '{{ . }}',
+        {{ end }}
+        additionalOptions);
+});
+</script>
