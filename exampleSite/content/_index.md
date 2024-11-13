@@ -6,4 +6,4 @@ date: 2023-07-10
 
 TODO: placeholder
 
-{{< timeline blockId="timeline-element" jsonFile="/timeline.json" >}}
+{{< timelinejs blockId="timeline-element" jsonFile="/timelinejs.json" >}}

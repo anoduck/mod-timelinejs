@@ -18,8 +18,8 @@ title = 'Test site for mod-template'
     source = "dist/timeline.js"
     target = "static/js/timeline.js"
   [[module.imports.mounts]]
-    source = "dist/timeline.json"
-    target = "static/timeline.json"
+    source = "dist/timelinejs.json"
+    target = "static/timelinejs.json"
   [[module.imports.mounts]]
     source = "layouts"
     target = "layouts"

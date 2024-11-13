@@ -25,7 +25,7 @@
     "postinstall": "npm run -s copy:css && npm run -s copy:js && npm run -s copy:data",
     "copy:css": "cpy node_modules/@knight-lab/timelinejs/dist/css/timeline.css dist --rename=timeline.scss --flat",
     "copy:js": "cpy node_modules/@knight-lab/timelinejs/dist/js/timeline.js dist --flat",
-    "copy:data": "cpy static/timeline.json dist --flat",
+    "copy:data": "cpy static/timelinejs.json dist --flat",
     "test": "npm run -s build",
     "upgrade": "npx npm-check-updates -u && npm run -s mod:update",
     "prepare": "node .husky/install.mjs"
