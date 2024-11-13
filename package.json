@@ -1,6 +1,6 @@
 {
-  "name": "@gethinode/mod-template",
-  "version": "0.0.1",
+  "name": "@anoduck/mod-timelinejs3",
+  "version": "0.0.2",
   "description": "A Hinode Module to allow users of hinode to use the timelinejs library for more dynamic timelines.",
   "keywords": [
     "hugo",
@@ -32,14 +32,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/gethinode/mod-template.git"
+    "url": "git+https://github.com/anoduck/mod-timelinejs3.git"
   },
-  "author": "Mark Dumay",
+  "author": "Anoduck, The Anonymous Duck",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/gethinode/hinode/issues"
+    "url": "https://github.com/anoduck/mod-timelinejs3/issues"
   },
-  "homepage": "https://gethinode.com",
+  "homepage": "https://anoduck.com",
   "devDependencies": {
     "@commitlint/cli": "^19.5.0",
     "@commitlint/config-conventional": "^19.5.0",
