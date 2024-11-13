@@ -1,1 +1,0 @@
-gethinode/mod-template
