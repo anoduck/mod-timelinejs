@@ -5,11 +5,21 @@ title = 'Test site for mod-template'
 [module]
   # Build and serve using local mod-template clone declared in the named Hugo workspace:
   workspace = "mod-template.work"
-  [[module.imports]]
-    path = "github.com/gethinode/mod-template"
-  [[module.imports.mounts]]
-    source = "dist"
+  replacements = "github.com/anoduck/mod-timelinejs3 -> ../.."
+  [[module.mounts]]
+    source = "static"
     target = "static"
+  [[module.imports]]
+    path = "github.com/anoduck/mod-timelinejs3"
+  [[module.imports.mounts]]
+    source = "dist/timeline.scss"
+    target = "static/timeline.css"
+  [[module.imports.mounts]]
+    source = "dist/timeline.js"
+    target = "static/js/timeline.js"
+  [[module.imports.mounts]]
+    source = "dist/timeline.json"
+    target = "static/timeline.json"
   [[module.imports.mounts]]
     source = "layouts"
     target = "layouts"
