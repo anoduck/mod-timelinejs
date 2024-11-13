@@ -11,8 +11,8 @@
     target = "assets/scss"
     includeFiles = "timeline.scss"
   [[module.mounts]]
-    source = "dist/timeline.json"
-    target = "static/timeline.json"
+    source = "dist/timelinejs.json"
+    target = "static/timelinejs.json"
   [[module.mounts]]
     source = 'layouts'
     target = 'layouts'
