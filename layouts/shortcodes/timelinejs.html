@@ -14,8 +14,6 @@
 {{- $blockId := .Get "blockId" | default "timeline-element" -}}
 {{- $jsonFile := .Get "jsonFile" | default "/timelinejs.json" -}}
 
-{{ printf "%s %s" (.Get "blockId") (.Get "jsonFile") }} 
-
 <link title="timeline-styles" rel="stylesheet" href="/timeline.css">
 <script src="/js/timeline.js"></script>
 
