@@ -40,12 +40,20 @@ This module uses [semantic-release][semantic-release] to automate the release of
 
 ## Configuration
 
-This module is configured to act as a shortcode, thus only loading the timelinejs only if the shortcoode is used on the page. Advanced configuration of timelinejs options is not needed, and are already optimized for use. Data is stored in the `static` data in the form of a json file. More information about the format of the json file can be found on [Knightlab's webiste](https://timeline.knightlab.com/docs/json-format.html). The shortcode only takes two arguments, which are described below.
+This module is configured to act as a shortcode, thus only loading the timelinejs only if the shortcode is used on the page. Advanced configuration of timelinejs options is not needed, and are already optimized for use.
+
+### Json or Google Spreadsheet
+
+You can use a JSON file or a Google spreadsheet to provide the data, because the src code syntax is exactly the same for both. 
+
+Data is stored in the `static` data in the form of a json file. More information about the format of the json file can be found on [KnightLab's webiste](https://timeline.knightlab.com/docs/json-format.html). The shortcode only takes two arguments, which are described below.
+
+To you a Google spreadsheet simply place the full url of the spreadsheet share link where you would place the json file, I.E. the `jsonFile` property. You can use [KnightLab's Template](https://docs.google.com/spreadsheets/d/1pHBvXN7nmGkiG8uQSUB82eNlnL8xHu6kydzH_-eguHQ/copy) to get started.
 
 | Setting                   | Default            | Description                                    |
 |---------------------------|--------------------|------------------------------------------------|
 | blockId                   | "timeline-element" | The ID attribute given to the timeline element |
-| jsonFile                  | "timelinejs.json"  | The JSON file containing event data            |
+| jsonFile                  | "timelinejs.json"  | The JSON file or Google Sheet containing event data |
 
 The shortcode can be used with the following labeled arguments.
 
@@ -60,9 +68,14 @@ The shortcode can be used with the following labeled arguments.
 [hinode_docs]: https://gethinode.com
 [Timelinejs3_Github]: https://github.com/NUKnightLab/TimelineJS3
 [Timelinejs Site]: https://timeline.knightlab.com
+[Timelinejs Docs]: https://timeline.knightlab.com/docs/instantiate-a-timeline.html
 [This Module]: https://github.com/anoduck/mod-timleinejs3
 [repository]: https://github.com/gethinode/hinode.git
 [repository_template]: https://github.com/gethinode/template.git
 [conventionalcommits]: https://www.conventionalcommits.org
 [husky]: https://typicode.github.io/husky/
 [semantic-release]: https://semantic-release.gitbook.io/
+
+-----
+
+Don't worry, you can thank me later.
