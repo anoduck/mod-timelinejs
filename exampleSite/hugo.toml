@@ -15,11 +15,17 @@ title = 'Test site for mod-template'
     source = "dist/timeline.scss"
     target = "static/timeline.css"
   [[module.imports.mounts]]
+    source = "dist/fonts.scss"
+    target = "static/fonts.css"
+  [[module.imports.mounts]]
     source = "dist/timeline.js"
     target = "static/js/timeline.js"
   [[module.imports.mounts]]
-    source = "dist/timelinejs.json"
-    target = "static/timelinejs.json"
+    source = "dist/fonts"
+    target = "static/fonts"
+  [[module.imports.mounts]]
+    source = "dist/icons"
+    target = "static/icons"
   [[module.imports.mounts]]
     source = "layouts"
     target = "layouts"

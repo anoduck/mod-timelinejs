@@ -47,7 +47,7 @@ This module is configured to act as a shortcode, thus only loading the timelinej
 | blockId                   | "timeline-element" | The ID attribute given to the timeline element |
 | jsonFile                  | "timelinejs.json"  | The JSON file containing event data            |
 
-The shortcode can be used with labeled arguments or positional arguments.
+The shortcode can be used with the following labeled arguments.
 
 ```html
 {{< timelinejs blockId="timeline-element" jsonFile="/timelinejs.json" >}}
