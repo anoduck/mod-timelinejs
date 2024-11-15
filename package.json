@@ -1,6 +1,6 @@
 {
   "name": "@anoduck/mod-timelinejs3",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "A Hinode Module to allow users of hinode to use the timelinejs library for more dynamic timelines.",
   "keywords": [
     "hugo",
@@ -22,10 +22,12 @@
     "mod:update": "rimraf _vendor && hugo mod get -u ./... && hugo mod get -u && npm run -s mod:vendor && npm run -s mod:tidy",
     "mod:tidy": "hugo mod tidy",
     "mod:vendor": "rimraf _vendor && hugo mod vendor",
-    "postinstall": "npm run -s copy:css && npm run -s copy:js && npm run -s copy:data",
+    "postinstall": "npm run -s copy:css && npm run -s copy:rexrep && npm run -s copy:js && npm run -s copy:font_scss && npm run -s copy:icons",
     "copy:css": "cpy node_modules/@knight-lab/timelinejs/dist/css/timeline.css dist --rename=timeline.scss --flat",
-    "copy:js": "cpy node_modules/@knight-lab/timelinejs/dist/js/timeline.js dist --flat",
-    "copy:data": "cpy static/timelinejs.json dist --flat",
+    "copy:rexrep": "rexreplace '..\/js\/..\/css\/icons\/' '/' dist/timeline.scss",
+    "copy:js": "cpy node_modules/@knight-lab/timelinejs/dist/js/timeline.js dist/js --flat",
+    "copy:font_scss": "cpy node_modules/@knight-lab/timelinejs/dist/css/fonts/font.default.css dist --rename=font.default.scss --flat",
+    "copy:icons": "cpy node_modules/@knight-lab/timelinejs/dist/css/icons/tl-icons.woff2 dist --flat",
     "test": "npm run -s build",
     "upgrade": "npx npm-check-updates -u && npm run -s mod:update",
     "prepare": "node .husky/install.mjs"
@@ -43,6 +45,7 @@
   "devDependencies": {
     "@commitlint/cli": "^19.5.0",
     "@commitlint/config-conventional": "^19.5.0",
+    "@knight-lab/timelinejs": "^3.9.3",
     "@semantic-release/exec": "^6.0.3",
     "@semantic-release/git": "^10.0.1",
     "commitizen": "^4.3.1",
@@ -50,6 +53,7 @@
     "cz-conventional-changelog": "^3.3.0",
     "hugo-bin": "^0.135.0",
     "husky": "^9.1.6",
+    "rexreplace": "^7.1.11",
     "rimraf": "^6.0.1",
     "semantic-release": "^24.2.0"
   },
@@ -86,8 +90,5 @@
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
-  },
-  "dependencies": {
-    "@knight-lab/timelinejs": "^3.9.3"
   }
 }

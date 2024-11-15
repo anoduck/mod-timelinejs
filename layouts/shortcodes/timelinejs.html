@@ -1,20 +1,32 @@
+<!-- 
+    Licensed under MIT License 2024, Anoduck, The Anonymous Duck
+    https://anoduck.mit-license.org
+
+    Hinode is a creation of The Hinode Team / I.E. Mark Dumay -> Of, which all credit and property rights are due.
+
+    TimelineJS is created by The Knight Labs at The NorthWestern University School of Engineering, for which, all credit and property rights are due as well.
+
+-->
+<!-- 
+    Copyright � 2024 The Hinode Team / Mark Dumay. All rights reserved.
+    Use of this source code is governed by The MIT License (MIT) that can be found in the LICENSE file.
+    Visit gethinode.com/license for more details.
+-->
+
 {{/* Set Variables to be used in the shorcode */}}
 
-<!-- Initialize arguments -->
-{{/* {{- $blockId := "" -}}
-{{- $jsonFile := "" -}} */}}
+<!-- Check for valid arguments -->
+{{ $error := false }}
 
-{{/* {{- if .IsNamedParams -}}
-    {{- $blockId := .Get "blockId" | default "timeline-element" -}}
-    {{- $jsonFile := .Get "jsonFile" | default "/timelinejs.json" -}}
-{{- else -}}
-    {{- $jsonFile = .Get 0 -}}
-{{- end -}} */}}
+<!-- Initialize arguments -->
+{{- $blockId := "" -}}
+{{- $jsonFile := "" -}}
 
 {{- $blockId := .Get "blockId" | default "timeline-element" -}}
 {{- $jsonFile := .Get "jsonFile" | default "/timelinejs.json" -}}
 
 <link title="timeline-styles" rel="stylesheet" href="/timeline.css">
+<link title="timeline-fonts" rel="stylesheet" href="/font.default.css">
 <script src="/js/timeline.js"></script>
 
 {{/* This "Div" element is where the timeline will be rendered on page. */}}
