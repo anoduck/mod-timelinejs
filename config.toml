@@ -8,20 +8,12 @@
     target = "assets/js/modules/timeline/timeline.js"
   [[module.mounts]]
     source = "dist"
-    target = "assets/scss"
+    target = "static"
     includeFiles = [
       "timeline.scss",
-      "fonts.scss"
+      "font.default.scss",
+      "tl-icons.woff2"
     ]
-  [[module.mounts]]
-    source = "dist/locale"
-    target = "assets/js/modules/timeline/locale"
-  [[module.mounts]]
-    source = "dist/fonts"
-    target = "static/fonts"
-  [[module.mounts]]
-    source = "dist/icons"
-    target = "static/icons"
   [[module.mounts]]
     source = 'layouts'
     target = 'layouts'
@@ -31,5 +23,3 @@
   [[module.mounts]]
     source = 'static'
     target = 'static'
-  [[module.imports]]
-    path = "github.com/gethinode/mod-utils/v2"

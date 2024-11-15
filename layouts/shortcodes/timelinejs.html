@@ -25,35 +25,8 @@
 {{- $blockId := .Get "blockId" | default "timeline-element" -}}
 {{- $jsonFile := .Get "jsonFile" | default "/timelinejs.json" -}}
 
-{{ with resources.Get "assets/scss/timeline.scss" }}
-  {{ $opts := dict "transpiler" "dartsass" "targetPath" "dist/timeline.css" }}
-  {{ with . | toCSS $opts }}
-    {{ if hugo.IsDevelopment }}
-      <link rel="stylesheet" href="{{ .RelPermalink }}">
-    {{ else }}
-      {{ with . | minify | fingerprint }}
-        <link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous">
-      {{ end }}
-    {{ end }}
-  {{ end }}
-{{ end }}
-
-{{/* <link title="timeline-styles" rel="stylesheet" href="/timeline.css"> */}}
-
-{{ with resources.Get "assets/scss/fonts.scss" }}
-  {{ $opts := dict "transpiler" "dartsass" "targetPath" "dist/fonts.css" }}
-  {{ with . | toCSS $opts }}
-    {{ if hugo.IsDevelopment }}
-      <link rel="stylesheet" href="{{ .RelPermalink }}">
-    {{ else }}
-      {{ with . | minify | fingerprint }}
-        <link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous">
-      {{ end }}
-    {{ end }}
-  {{ end }}
-{{ end }}
-
-{{/* <link title="timeline-fonts" rel="stylesheet" href="/fonts.css"> */}}
+<link title="timeline-styles" rel="stylesheet" href="/timeline.css">
+<link title="timeline-fonts" rel="stylesheet" href="/font.default.css">
 <script src="/js/timeline.js"></script>
 
 {{/* This "Div" element is where the timeline will be rendered on page. */}}
