@@ -5,7 +5,7 @@
     max = ""
   [[module.mounts]]
     source = "dist/js/timeline.js"
-    target = "assets/js/modules/timeline/timeline.js"
+    target = "assets/js/modules/timelinejs/timeline.js"
   [[module.mounts]]
     source = "dist"
     target = "static"
@@ -14,6 +14,9 @@
       "font.default.scss",
       "tl-icons.woff2"
     ]
+  [[module.mounts]]
+    source = "dist/timelinejs.html"
+    target = "layouts/shortcodes/modules/timelinejs/timelinejs.html"
   [[module.mounts]]
     source = 'layouts'
     target = 'layouts'
