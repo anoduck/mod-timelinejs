@@ -24,5 +24,8 @@ title = 'Test site for mod-timelinejs3'
     source = "dist/tl-icons.woff2"
     target = "static/tl-icons.woff2"
   [[module.imports.mounts]]
+    source = "dist/timelinejs.html"
+    target = "layouts/shortcodes/timelinejs.html"
+  [[module.imports.mounts]]
     source = "layouts"
     target = "layouts"
