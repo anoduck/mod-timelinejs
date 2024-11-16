@@ -1,9 +1,9 @@
 baseURL = 'http://example.org/'
 languageCode = 'en-us'
-title = 'Test site for mod-template'
+title = 'Test site for mod-timelinejs3'
 
 [module]
-  # Build and serve using local mod-template clone declared in the named Hugo workspace:
+  # Build and serve using local mod-timelinejs3 clone declared in the named Hugo workspace:
   workspace = "mod-template.work"
   replacements = "github.com/anoduck/mod-timelinejs3 -> ../.."
   [[module.mounts]]
