@@ -17,6 +17,9 @@ title = 'Test site for mod-timelinejs3'
   [[module.imports.mounts]]
     source = "dist/font.default.scss"
     target = "static/font.default.css"
+    [[module.imports.mounts]]
+    source = "dist/tl-class.scss"
+    target = "static/tl-class.css"
   [[module.imports.mounts]]
     source = "dist/timeline.js"
     target = "static/js/timeline.js"
