@@ -12,6 +12,7 @@
     includeFiles = [
       "timeline.scss",
       "font.default.scss",
+      "tl-class.scss",
       "tl-icons.woff2"
     ]
   [[module.mounts]]
