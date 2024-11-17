@@ -9,6 +9,10 @@
   [[module.mounts]]
     source = "dist/scss"
     target = "assets/scss/modules/timelinejs"
+    includeFiles = [
+      "font.default.scss",
+      "timelinejs.scss"
+    ]
   [[module.mounts]]
     source = "dist/icons"
     target = "static/icons"

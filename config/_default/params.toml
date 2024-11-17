@@ -4,6 +4,5 @@
 [modules]
     [modules.timelinejs]
         integration = "optional"
-        excludeSCSS = true
-        disableTemplate = true
-        state = "defer"
+        disableTemplate = false
+        state = "async"
