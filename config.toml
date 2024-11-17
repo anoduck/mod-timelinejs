@@ -7,17 +7,11 @@
     source = "dist/js/timeline.js"
     target = "assets/js/modules/timelinejs/timeline.js"
   [[module.mounts]]
-    source = "dist"
-    target = "static"
-    includeFiles = [
-      "timeline.scss",
-      "font.default.scss",
-      "timelinejs.scss",
-      "tl-icons.woff2"
-    ]
+    source = "dist/scss"
+    target = "assets/scss/modules/timelinejs"
   [[module.mounts]]
-    source = "dist/timelinejs.html"
-    target = "layouts/shortcodes/timelinejs.html"
+    source = "dist/icons"
+    target = "static/icons"
   [[module.mounts]]
     source = 'layouts'
     target = 'layouts'

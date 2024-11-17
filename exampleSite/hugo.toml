@@ -12,23 +12,17 @@ title = 'Test site for mod-timelinejs3'
   [[module.imports]]
     path = "github.com/anoduck/mod-timelinejs3"
   [[module.imports.mounts]]
-    source = "dist/timeline.scss"
+    source = "dist/scss/timeline.scss"
     target = "static/timeline.css"
   [[module.imports.mounts]]
-    source = "dist/font.default.scss"
+    source = "dist/scss/font.default.scss"
     target = "static/font.default.css"
-    [[module.imports.mounts]]
-    source = "dist/timelinejs.scss"
-    target = "static/timelinejs.css"
   [[module.imports.mounts]]
-    source = "dist/timeline.js"
+    source = "dist/js/timeline.js"
     target = "static/js/timeline.js"
   [[module.imports.mounts]]
-    source = "dist/tl-icons.woff2"
-    target = "static/tl-icons.woff2"
-  [[module.imports.mounts]]
-    source = "dist/timelinejs.html"
-    target = "layouts/shortcodes/timelinejs.html"
+    source = "dist/icons/tl-icons.woff2"
+    target = "static/icons/tl-icons.woff2"
   [[module.imports.mounts]]
     source = "layouts"
     target = "layouts"

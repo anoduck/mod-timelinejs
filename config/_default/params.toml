@@ -1,0 +1,9 @@
+
+# Default params for timelinejs
+
+[modules]
+    [modules.timelinejs]
+        integration = "optional"
+        excludeSCSS = true
+        disableTemplate = true
+        state = "defer"

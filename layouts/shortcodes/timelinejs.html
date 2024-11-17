@@ -32,14 +32,6 @@
 
 {{/* This script should be rendered directly after the div tag. */}}
 <script type="text/javascript">
-{{/* This loads the options */}}
-var additionalOptions = {
-    is_embed: true,
-    language: 'en',
-    height: '600px',
-    width: '100px'
-}
-
 {{/* This instantiates the timeline */}}
 document.addEventListener("DOMContentLoaded", function() {
     window.timeline = new TL.Timeline(
@@ -47,8 +39,7 @@ document.addEventListener("DOMContentLoaded", function() {
             '{{ . }}',
         {{ end }}
         {{ with $jsonFile }}
-            '{{ . }}',
+            '{{ . }}')
         {{ end }}
-        additionalOptions)
 });
 </script>
