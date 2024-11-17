@@ -1,6 +1,6 @@
 {
   "name": "@anoduck/mod-timelinejs3",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "description": "A Hinode Module to allow users of hinode to use the timelinejs library for more dynamic timelines.",
   "keywords": [
     "hugo",
@@ -26,7 +26,7 @@
     "copy:css": "cpy node_modules/@knight-lab/timelinejs/dist/css/timeline.css dist --rename=timeline.scss --flat",
     "copy:js": "cpy node_modules/@knight-lab/timelinejs/dist/js/timeline.js dist/js --flat",
     "copy:font_scss": "cpy node_modules/@knight-lab/timelinejs/dist/css/fonts/font.default.css dist --rename=font.default.scss --flat",
-    "copy:tlclass": "cpy assets/scss/modules/timelinejs/tl-class.css dist --rename=tl-class.scss --flat ",
+    "copy:tlclass": "cpy assets/scss/timelinejs.scss dist --flat ",
     "copy:icons": "cpy node_modules/@knight-lab/timelinejs/dist/css/icons/tl-icons.woff2 dist --flat",
     "copy:shortcode": "cpy layouts/shortcodes/timelinejs.html dist --flat",
     "copy:rexrep": "rexreplace '../js/../css/icons/' '/' dist/timeline.scss",
