@@ -17,7 +17,7 @@
     ]
   [[module.mounts]]
     source = "dist/timelinejs.html"
-    target = "layouts/shortcodes/modules/timelinejs/timelinejs.html"
+    target = "layouts/shortcodes/timelinejs.html"
   [[module.mounts]]
     source = 'layouts'
     target = 'layouts'
