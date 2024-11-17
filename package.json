@@ -1,6 +1,6 @@
 {
   "name": "@anoduck/mod-timelinejs3",
-  "version": "0.0.11",
+  "version": "0.0.13",
   "description": "A Hinode Module to allow users of hinode to use the timelinejs library for more dynamic timelines.",
   "keywords": [
     "hugo",
@@ -22,12 +22,13 @@
     "mod:update": "rimraf _vendor && hugo mod get -u ./... && hugo mod get -u && npm run -s mod:vendor && npm run -s mod:tidy",
     "mod:tidy": "hugo mod tidy",
     "mod:vendor": "rimraf _vendor && hugo mod vendor",
-    "postinstall": "npm run -s copy:css && npm run -s copy:js && npm run -s copy:font_scss && npm run -s copy:icons &&  npm run -s copy:rexrep",
-    "copy:css": "cpy node_modules/@knight-lab/timelinejs/dist/css/timeline.css dist/scss --rename=timelinejs.scss --flat",
+    "postinstall": "npm run -s copy:css && npm run -s copy:cssmap && npm run -s copy:js && npm run -s copy:font_scss && npm run -s copy:icons &&  npm run -s copy:rexrep",
+    "copy:css": "cpy node_modules/@knight-lab/timelinejs/dist/css/timeline.css dist/scss --rename=timeline.scss --flat",
+    "copy:cssmap": "cpy node_modules/@knight-lab/timelinejs/dist/css/timeline.css.map dist/scss --flat",
     "copy:js": "cpy node_modules/@knight-lab/timelinejs/dist/js/timeline.js dist/js --flat",
     "copy:font_scss": "cpy node_modules/@knight-lab/timelinejs/dist/css/fonts/font.default.css dist/scss --rename=font.default.scss --flat",
     "copy:icons": "cpy node_modules/@knight-lab/timelinejs/dist/css/icons/tl-icons.woff2 dist/icons --flat",
-    "copy:rexrep": "rexreplace '../js/../css/icons/' '/icons/' dist/scss/timelinejs.scss",
+    "copy:rexrep": "rexreplace '../js/../css/icons/' '/' dist/scss/timeline.scss",
     "test": "npm run -s build",
     "upgrade": "npx npm-check-updates -u && npm run -s mod:update",
     "prepare": "node .husky/install.mjs"
