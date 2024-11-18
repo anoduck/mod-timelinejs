@@ -5,4 +5,4 @@
     [modules.timelinejs]
         integration = "optional"
         disableTemplate = false
-        state = "async"
+        state = "defer"

@@ -4,21 +4,21 @@
     min = "0.110.0"
     max = ""
   [[module.mounts]]
-    source = "dist/js/timeline.js"
-    target = "assets/js/modules/timelinejs"
-    includeFiles = "timeline.js"
+    source = "dist/timeline.js"
+    target = "assets/js/modules/timelinejs/timeline.js"
   [[module.mounts]]
-    source = "dist/scss/timeline.scss"
+    source = "dist/timeline.scss"
     target = "assets/scss/timeline.scss"
   [[module.mounts]]
-    source = "dist/scss/timeline.css.map"
+    source = "dist/timeline.css.map"
     target = "assets/scss/modules/timelinejs/timeline.css.map"
   [[module.mounts]]
-    source = "dist/scss/font.default.scss"
+    source = "dist/font.default.scss"
     target = "assets/scss/modules/timelinejs/font.default.scss"
   [[module.mounts]]
-    source = "dist/icons/tl-icons.woff2"
-    target = "static/tl-icons.woff2"
+    source = "dist"
+    target = "static"
+    includeFiles = ["tl-icons.*"]
   [[module.mounts]]
     source = 'layouts'
     target = 'layouts'
