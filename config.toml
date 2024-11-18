@@ -8,10 +8,10 @@
     target = "assets/js/modules/timelinejs/timeline.js"
   [[module.mounts]]
     source = "dist/timeline.scss"
-    target = "assets/scss/timeline.scss"
+    target = "assets/scss/modules/timelinejs/timeline.scss"
   [[module.mounts]]
-    source = "dist/timeline.css.map"
-    target = "assets/scss/modules/timelinejs/timeline.css.map"
+    source = "dist/timelinejs.scss"
+    target = "assets/scss/modules/timelinejs/timelinejs.scss"
   [[module.mounts]]
     source = "dist/font.default.scss"
     target = "assets/scss/modules/timelinejs/font.default.scss"

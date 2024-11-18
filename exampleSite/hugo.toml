@@ -2,6 +2,15 @@ baseURL = 'http://example.org/'
 languageCode = 'en-us'
 title = 'Test site for mod-timelinejs3'
 
+[main.build]
+  transpiler = "dartsass"
+
+[markup.goldmark.renderer]
+  unsafe = true
+
+[markup.goldmark.parser.attribute]
+  block = true
+
 [module]
   # Build and serve using local mod-timelinejs3 clone declared in the named Hugo workspace:
   workspace = "mod-timelinejs3.work"
@@ -21,7 +30,7 @@ title = 'Test site for mod-timelinejs3'
     source = "dist/timeline.scss"
     target = "static/timeline.css"
   [[module.imports.mounts]]
-    source = "dist/timeline.css.map"
+    source = "dist/timelinejs.scss"
     target = "static/timeline.css.map"
   [[module.imports.mounts]]
     source = "dist/font.default.scss"
