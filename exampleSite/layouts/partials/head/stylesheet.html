@@ -1,0 +1,29 @@
+{{- $source := "scss/timelinejs.scss" -}}
+{{- $target := "css/main.css" -}}
+
+<!-- TODO: remove debug statement -->
+{{- $files := slice -}}
+{{- range $index, $file := resources.Match "**.scss" -}}
+    {{- warnf "Processing file: %s" $file }}
+    {{- $files = $files | append $file -}}
+{{- end -}}
+
+{{/* {{- $options := (dict "transpiler" "dartsass" "targetPath" $target) -}} */}}
+{{/* {{- $options = merge $options (dict "outputStyle" "expanded") -}} */}}
+
+{{ $options := dict
+  "transpiler" "dartsass"
+  "targetPath" $target
+  "enableSourceMap" (not hugo.IsProduction) 
+  "includePaths" (slice "assets/scss/modules/timelinejs")
+  }}
+{{- $options = merge $options (dict "outputStyle" "expanded") -}}
+
+<!-- TODO: fix workaround replacing resources.Get with resources.GetMatch -->
+{{/*- $css := resources.Get $source | resources.ExecuteAsTemplate "app-dart.scss" . | toCSS $options -*/}}
+{{/* {{- $css := resources.GetMatch $source | resources.ExecuteAsTemplate "style.app.scss" . | toCSS $options -}} */}}
+
+{{ with resources.Get $source | css.Sass $options | minify | fingerprint }}
+<link rel="stylesheet" href="{{ . }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous">
+{{ end }}
+<link rel="stylesheet" href="/style.css">
