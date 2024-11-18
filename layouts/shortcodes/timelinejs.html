@@ -1,4 +1,4 @@
-<!-- 
+<!--
     Licensed under MIT License 2024, Anoduck, The Anonymous Duck
     https://anoduck.mit-license.org
 
@@ -6,7 +6,7 @@
 
     TimelineJS is created by The Knight Labs at The NorthWestern University School of Engineering, for which, all credit and property rights are due.
 -->
-<!-- 
+<!--
     Copyright � 2024 The Hinode Team / Mark Dumay. All rights reserved.
     Use of this source code is governed by The MIT License (MIT) that can be found in the LICENSE file.
     Visit gethinode.com/license for more details.
@@ -16,12 +16,6 @@
 
 <!-- Acquire Params -->
 {{ $timeleinejs := $.Page.Params.timelinejs }}
-{{ $title := "TimelineJS" }}
-
-<!-- Return title, if title -->
-{{ if .Get "title" }}
-    {{ $title := .Get "title" }}
-{{ end }}
 
 <!-- Check for valid arguments -->
 {{- $error := false -}}
