@@ -11,7 +11,7 @@
     target = "assets/scss/modules/timelinejs/timeline.scss"
   [[module.mounts]]
     source = "dist/timelinejs.scss"
-    target = "assets/scss/modules/timelinejs/timelinejs.scss"
+    target = "assets/scss/timelinejs.scss"
   [[module.mounts]]
     source = "dist/font.default.scss"
     target = "assets/scss/modules/timelinejs/font.default.scss"
