@@ -27,8 +27,8 @@
 {{- $jsonFile := .Get "jsonFile" | default "timelinejs.json" -}}
 
 {{/* In this branch we try to load the resources remotely, because getting done is better than perfection at the moment. */}}
-<link title="timeline-styles" rel="stylesheet" href="https://cdn.knightlab.com/libs/timeline3/latest/css/timeline.css" crossorigin="anonymous">
-<script src="https://cdn.knightlab.com/libs/timeline3/latest/js/timeline.js" crossorigin="anonymous"></script>
+<link title="timeline-styles" rel="stylesheet" href="https://cdn.knightlab.com/libs/timeline3/latest/css/timeline.css" crossorigin="anonymous" type="text/css">
+<script src="https://cdn.knightlab.com/libs/timeline3/latest/js/timeline.js" crossorigin="anonymous" type="text/javascript"></script>
 
 <!-- Inject div element -->
 {{/* This "Div" element is where the timeline will be rendered on page. */}}
