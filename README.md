@@ -52,7 +52,6 @@ To you a Google spreadsheet simply place the full url of the spreadsheet share l
 
 | Setting                   | Default            | Description                                    |
 |---------------------------|--------------------|------------------------------------------------|
-| blockId                   | "timeline-element" | The ID attribute given to the timeline element |
 | jsonFile                  | "timelinejs.json"  | The JSON file or Google Sheet containing event data |
 
 The shortcode can be used with the following labeled arguments.
