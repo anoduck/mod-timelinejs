@@ -22,13 +22,7 @@
     "mod:update": "rimraf _vendor && hugo mod get -u ./... && hugo mod get -u && npm run -s mod:vendor && npm run -s mod:tidy",
     "mod:tidy": "hugo mod tidy",
     "mod:vendor": "rimraf _vendor && hugo mod vendor",
-    "postinstall": "npm run -s copy:css && npm run -s copy:scss && npm run -s copy:js && npm run -s copy:font && npm run -s copy:icons &&  npm run -s copy:rexrep",
-    "copy:css": "cpy node_modules/@knight-lab/timelinejs/dist/css/timeline.css dist --rename=timeline.scss --flat",
-    "copy:scss": "cpy assets/scss/modules/timelinejs/timelinejs.scss dist --flat",
-    "copy:js": "cpy node_modules/@knight-lab/timelinejs/dist/js/timeline.js dist --flat",
-    "copy:font": "cpy node_modules/@knight-lab/timelinejs/dist/css/fonts/font.default.css dist --rename=font.default.scss --flat",
-    "copy:icons": "cpy node_modules/@knight-lab/timelinejs/dist/css/icons/tl-icons.* dist/ --flat",
-    "copy:rexrep": "rexreplace '../js/../css/icons/' '/icons/' dist/timeline.scss",
+    "postinstall": "echo 'Nothing to be done.'",
     "test": "npm run -s build",
     "upgrade": "npx npm-check-updates -u && npm run -s mod:update",
     "prepare": "node .husky/install.mjs"
@@ -46,7 +40,6 @@
   "devDependencies": {
     "@commitlint/cli": "^19.5.0",
     "@commitlint/config-conventional": "^19.5.0",
-    "@knight-lab/timelinejs": "^3.9.3",
     "@semantic-release/exec": "^6.0.3",
     "@semantic-release/git": "^10.0.1",
     "commitizen": "^4.3.1",
@@ -54,9 +47,7 @@
     "cz-conventional-changelog": "^3.3.0",
     "hugo-bin": "^0.135.0",
     "husky": "^9.1.6",
-    "less2scss": "^1.9.2",
     "npm-run-all": "^4.1.5",
-    "rexreplace": "^7.1.11",
     "rimraf": "^6.0.1",
     "semantic-release": "^24.2.0"
   },
