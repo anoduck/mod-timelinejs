@@ -69,6 +69,7 @@ The shortcode can be used with the following labeled arguments.
 [Timelinejs Site]: https://timeline.knightlab.com
 [Timelinejs Docs]: https://timeline.knightlab.com/docs/instantiate-a-timeline.html
 [This Module]: https://github.com/anoduck/mod-timleinejs3
+[SRI Hash]: https://www.srihash.org/
 [repository]: https://github.com/gethinode/hinode.git
 [repository_template]: https://github.com/gethinode/template.git
 [conventionalcommits]: https://www.conventionalcommits.org
