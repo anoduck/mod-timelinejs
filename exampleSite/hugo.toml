@@ -5,9 +5,6 @@ title = 'Test site for mod-timelinejs3'
 [markup.goldmark.renderer]
   unsafe = true
 
-[markup.goldmark.parser.attribute]
-  block = true
-
 [module]
   # Build and serve using local mod-timelinejs3 clone declared in the named Hugo workspace:
   workspace = "mod-timelinejs3.work"
