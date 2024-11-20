@@ -5,17 +5,16 @@
   <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0">
   <title>{{ with .Title }}{{ printf "%s | " . }}{{ end }}{{ site.Title }}</title>
   {{ partial "head/stylesheet.html" -}}
-  <link crossorigin="anonymous" referrerpolicy="origin" title="timeline-fonts" rel="stylesheet" href="font.default.css" type="text/css">
 </head>
 <body>
 {{ block "main" . }}
 
 {{ end }}
-Variables:
+{{/* Variables:
   <ul>
     <li>blockId = {{ .Get "blockId" }}</li>
     <li>jsonFile = {{ .Get "jsonFile" }}</li>
-  </ul>
-{{- partial "footer/scripts.html" (dict "page" .) -}}
+  </ul> */}}
+{{ partial "footer/scripts.html" -}}
 </body>
 </html>

@@ -1,5 +1,5 @@
 {{- $filename := .filename | default "js/main.bundle.js" -}}
-{{- $match := .match | default "js/**.js" -}}
+{{- $match := .match | default "js/timeline.js" -}}
 {{- $page := .page -}}
 
 {{- warnf "Processing js pattern: %s" $match -}}
@@ -12,5 +12,5 @@
     {{ $bundle := $files | resources.Concat $filename -}}
     {{ $js := $bundle | resources.ExecuteAsTemplate $filename $page -}}
 
-    <script src="{{ $js.Permalink }}"></script>
+    <script src="{{ .Permalink $js }}"></script>
 {{ end -}}

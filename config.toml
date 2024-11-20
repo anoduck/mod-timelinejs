@@ -5,7 +5,7 @@
     max = ""
   [[module.mounts]]
     source = "dist/timeline.js"
-    target = "assets/js/modules/timelinejs/timeline.js"
+    target = "static/timeline.js"
   [[module.mounts]]
     source = "dist/timeline.scss"
     target = "assets/scss/modules/timelinejs/timeline.scss"
@@ -16,9 +16,8 @@
     source = "dist/font.default.scss"
     target = "assets/scss/modules/timelinejs/font.default.scss"
   [[module.mounts]]
-    source = "dist"
-    target = "static"
-    includeFiles = ["tl-icons.*"]
+    source = "dist/icons"
+    target = "static/icons"
   [[module.mounts]]
     source = 'layouts'
     target = 'layouts'
