@@ -10,16 +10,12 @@
 
 {{ $options := dict
   "transpiler" "dartsass"
-  "targetPath" $target
+  "targetPath" $target 
   "enableSourceMap" (not hugo.IsProduction) 
-  "includePaths" (slice "assets/scss/modules/timelinejs/")
   }}
 {{- $options = merge $options (dict "outputStyle" "expanded") -}}
 
-{{/* {{- $css := resources.GetMatch $source | resources.ExecuteAsTemplate "style.app.scss" . | toCSS $options -}} */}}
-
-{{ with resources.Get $source | toCSS $options }}
-<link rel="stylesheet" href="{{ . }}" crossorigin="anonymous">
-{{ end }}
+{{- $css := resources.GetMatch $source | resources.ExecuteAsTemplate $target . | css.Sass $options -}}
+<link rel="stylesheet" href="{{ .Permalink $css }}" crossorigin="anonymous">
 
 <link rel="stylesheet" href="/style.css">
