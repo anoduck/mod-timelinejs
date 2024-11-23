@@ -15,21 +15,5 @@ title = 'Test site for mod-timelinejs3'
   # Build and serve using local mod-timelinejs3 clone declared in the named Hugo workspace:
   workspace = "mod-timelinejs3.work"
   replacements = "github.com/anoduck/mod-timelinejs3 -> ../.."
-  [[module.mounts]]
-    source = "static"
-    target = "static"
-  [[module.mounts]]
-    source = "layouts"
-    target = "layouts"
   [[module.imports]]
     path = "github.com/anoduck/mod-timelinejs3"
-
-[params]
-  [modules]
-    [modules.timelinejs3]
-      integration = "optional"
-      disableTemplate = false
-      state = "defer"
-  [debugging]
-    showJS = true
-    showSCSS = true
