@@ -1,1 +1,1 @@
-exclude = ["hugo.toml"]
+exclude = ["**/hugo.toml"]

@@ -1,3 +1,6 @@
+[markup.goldmark.renderer]
+  unsafe = true
+
 [module]
   [module.hugoVersion]
     extended = true
@@ -22,9 +25,4 @@
   [[module.mounts]]
     source = 'layouts'
     target = 'layouts'
-  [[module.mounts]]
-    source = 'assets'
-    target = 'assets'
-  [[module.mounts]]
-    source = 'static'
-    target = 'static'
+    excludeSCSS = true

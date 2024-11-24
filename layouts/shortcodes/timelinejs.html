@@ -16,12 +16,14 @@
 {{- $error := false -}}
 
 <!-- Initialize arguments -->
-{{- $blockId := "" -}}
 {{- $jsonFile := "" -}}
 
 <!-- Define Variables -->
-{{- $blockId := .Get "blockId" | default "timeline-element" -}}
 {{- $jsonFile := .Get "jsonFile" | default "timelinejs.json" -}}
+
+{{/* In this branch we try to load the resources remotely, because getting done is better than perfection at the moment. */}}
+<link rel="stylesheet" href="https://cdn.knightlab.com/libs/timeline3/latest/css/timeline.css" integrity="sha384-tsNgcB1c5rl0DaLAKGId4pXHpQnZrA1njWqdAqQ9C4J+w0Ja/RpModKaao0xAVc5" crossorigin="anonymous" type="text/css">
+<script src="https://cdn.knightlab.com/libs/timeline3/latest/js/timeline.js" integrity="sha384-utoaM+Jap71NQCPS1ARBOcZxgE5B3UKgHaD95qJdS5ERHbS8zNwXN8oBHkLSNkQX" crossorigin="anonymous" type="text/javascript"></script>
 
 <!-- Inject div element -->
 {{ with $blockId }}
