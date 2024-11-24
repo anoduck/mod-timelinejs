@@ -12,11 +12,6 @@
     Visit gethinode.com/license for more details.
 -->
 
-{{/* Set Variables to be used in the shorcode */}}
-
-<!-- Acquire Params -->
-{{ $timeleinejs := $.Page.Params.timelinejs }}
-
 <!-- Check for valid arguments -->
 {{- $error := false -}}
 
@@ -29,21 +24,19 @@
 {{- $jsonFile := .Get "jsonFile" | default "timelinejs.json" -}}
 
 <!-- Inject div element -->
-{{/* This "Div" element is where the timeline will be rendered on page. */}}
 {{ with $blockId }}
     <div id="{{ . }}" style="height: 600px; width: 100%"></div>
 {{ end }}
 
-{{/* This script should be rendered directly after the div tag. */}}
+<!-- This instantiates the timelinejs element. -->
 <script type="text/javascript">
-{{/* This instantiates the timeline */}}
-document.addEventListener("DOMContentLoaded", function() {
-    window.timeline = new TL.Timeline(
-        {{ with $blockId }}
-            '{{ . }}',
-        {{ end }}
-        {{ with $jsonFile }}
-            '{{ . }}')
-        {{ end }}
-});
+    document.addEventListener("DOMContentLoaded", function() {
+        window.timeline = new TL.Timeline(
+            {{ with $blockId }}
+                '{{ . }}',
+            {{ end }}
+            {{ with $jsonFile }}
+                '{{ . }}')
+            {{ end }}
+    });
 </script>
