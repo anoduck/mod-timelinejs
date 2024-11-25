@@ -1,0 +1,18 @@
+[modules]
+    core = ["bootstrap", "fontawesome"]
+    optional = ["timelinejs3"]
+    excludeSCSS = ["bootstrap"]
+    disableTemplate = ["katex","mermaid","timelinejs3"]
+    [modules.timelinejs3]
+        state = "defer"
+    [modules.fontawesome]
+        inline = true
+        debug = true
+        skipMissing = false
+    [modules.utils]
+        filter = "[^0-9A-Za-z??�-� ;.,\\/'?\"]-"
+        raw = false   
+
+[debugging]
+    showJS = true
+    showSCSS = true
