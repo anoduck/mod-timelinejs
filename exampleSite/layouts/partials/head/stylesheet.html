@@ -1,5 +1,5 @@
 {{- $source := "scss/timelinejs.scss" -}}
-{{- $target := "css/timelinejs.css" -}}
+{{- $target := "css/main.css" -}}
 
 <!-- TODO: remove debug statement -->
 {{- $files := slice -}}
@@ -14,3 +14,4 @@
 {{- $css := resources.GetMatch $source | resources.ExecuteAsTemplate "style.app.scss" . | toCSS $options -}}
 
 <link rel="stylesheet" href="{{ $css.Permalink }}" crossorigin="anonymous" type="text/css">
+<link rel="stylesheet" href="/style.css">
