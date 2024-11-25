@@ -1,8 +1,24 @@
-
 # Default params for timelinejs
 
 [modules]
-    [modules.timelinejs]
+    [modules.timelinejs3]
         integration = "optional"
         disableTemplate = false
         state = "defer"
+
+    [modules.timelinejs3.csp]
+        style-src = ["www.youtube.com"]
+        font-src = ["fonts.gstatic.com"]
+        frame-src = [
+            "player.cloudinary.com",
+            "www.youtube-nocookie.com",
+            "www.youtube.com",
+            "www.vimeo.com"
+        ]
+        img-src = [
+            "data:",
+            "*.imgix.net",
+            "*.imagekit.io",
+            "*.cloudinary.com",
+            "i.ytimg.com"
+        ]
