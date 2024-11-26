@@ -1,9 +1,9 @@
 [modules]
     core = ["bootstrap", "fontawesome"]
-    optional = ["timelinejs3"]
+    optional = ["timelinejs"]
     excludeSCSS = ["bootstrap"]
-    disableTemplate = ["katex","mermaid","timelinejs3"]
-    [modules.timelinejs3]
+    disableTemplate = ["katex","mermaid","timelinejs"]
+    [modules.timelinejs]
         state = "defer"
     [modules.fontawesome]
         inline = true

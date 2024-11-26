@@ -14,17 +14,17 @@
     <a href="https://gethinode.com" alt="Hinode theme">
         <img src="https://img.shields.io/badge/theme-hinode-blue">
     </a>
-    <a href="https://github.com/anoduck/mod-timelinejs3/commits/main" alt="Last commit">
-        <img src="https://img.shields.io/github/last-commit/anoduck/mod-timelinejs3.svg">
+    <a href="https://github.com/anoduck/mod-timelinejs/commits/main" alt="Last commit">
+        <img src="https://img.shields.io/github/last-commit/anoduck/mod-timelinejs.svg">
     </a>
-    <a href="https://github.com/anoduck/mod-timelinejs3/issues" alt="Issues">
-        <img src="https://img.shields.io/github/issues/anoduck/mod-timelinejs3.svg">
+    <a href="https://github.com/anoduck/mod-timelinejs/issues" alt="Issues">
+        <img src="https://img.shields.io/github/issues/anoduck/mod-timelinejs.svg">
     </a>
-    <a href="https://github.com/anoduck/mod-timelinejs3/pulls" alt="Pulls">
-        <img src="https://img.shields.io/github/issues-pr-raw/anoduck/mod-timelinejs3.svg">
+    <a href="https://github.com/anoduck/mod-timelinejs/pulls" alt="Pulls">
+        <img src="https://img.shields.io/github/issues-pr-raw/anoduck/mod-timelinejs.svg">
     </a>
-    <a href="https://github.com/anoduck/mod-timelinejs3/blob/main/LICENSE" alt="License">
-        <img src="https://img.shields.io/github/license/anoduck/mod-timelinejs3">
+    <a href="https://github.com/anoduck/mod-timelinejs/blob/main/LICENSE" alt="License">
+        <img src="https://img.shields.io/github/license/anoduck/mod-timelinejs">
     </a>
 </p>
 
@@ -32,7 +32,7 @@
 
 ![Logo](https://raw.githubusercontent.com/gethinode/hinode/main/static/img/logo.png)
 
-Hinode is a clean blog theme for [Hugo][hugo], an open-source static site generator. Hinode is available as a [template][repository_template], and a [main theme][repository]. This repository maintains a Hugo module to add KnightLab's timelinejs3 to a Hinode site. Visit the Hinode documentation site for [installation instructions][hinode_docs].
+Hinode is a clean blog theme for [Hugo][hugo], an open-source static site generator. Hinode is available as a [template][repository_template], and a [main theme][repository]. This repository maintains a Hugo module to add KnightLab's timelinejs to a Hinode site. Visit the Hinode documentation site for [installation instructions][hinode_docs].
 
 ## Contributing
 

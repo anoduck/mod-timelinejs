@@ -1,4 +1,4 @@
-module github.com/anoduck/mod-timelinejs3
+module github.com/anoduck/mod-timelinejs
 
 go 1.19
 

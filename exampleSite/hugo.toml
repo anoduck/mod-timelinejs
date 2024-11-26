@@ -1,14 +1,14 @@
 baseURL = 'http://example.org/'
 languageCode = 'en-us'
-title = 'Test site for mod-timelinejs3'
+title = 'Test site for mod-timelinejs'
 
 [markup.goldmark.renderer]
   unsafe = true
 
 [module]
-  # Build and serve using local mod-timelinejs3 clone declared in the named Hugo workspace:
-  workspace = "mod-timelinejs3.work"
-  replacements = "github.com/anoduck/mod-timelinejs3 -> ../.."
+  # Build and serve using local mod-timelinejs clone declared in the named Hugo workspace:
+  workspace = "mod-timelinejs.work"
+  replacements = "github.com/anoduck/mod-timelinejs -> ../.."
 
   [[module.imports]]
-    path = "github.com/anoduck/mod-timelinejs3"
+    path = "github.com/anoduck/mod-timelinejs"
