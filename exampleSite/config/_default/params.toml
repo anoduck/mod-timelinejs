@@ -1,7 +1,6 @@
 [modules]
     [modules.timelinejs]
         integration = "optional"
-        disableTemplate = false
         state = "defer"
     [modules.timelinejs.csp]
         style-src = ["www.youtube.com"]
