@@ -1,7 +1,4 @@
 [modules]
-    core = ["bootstrap"]
-    optional = ["timelinejs"]
-    excludeSCSS = ["bootstrap"]
     [modules.timelinejs]
         integration = "optional"
         disableTemplate = false
