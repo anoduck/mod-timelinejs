@@ -1,5 +1,5 @@
 {
-  "name": "@anoduck/mod-timelinejs3",
+  "name": "@anoduck/mod-timelinejs",
   "version": "0.0.26",
   "description": "A Hinode Module to allow users of hinode to use the timelinejs library for more dynamic timelines.",
   "keywords": [
@@ -35,12 +35,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/anoduck/mod-timelinejs3.git"
+    "url": "git+https://github.com/anoduck/mod-timelinejs.git"
   },
   "author": "Anoduck, The Anonymous Duck",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/anoduck/mod-timelinejs3/issues"
+    "url": "https://github.com/anoduck/mod-timelinejs/issues"
   },
   "homepage": "https://anoduck.com",
   "devDependencies": {

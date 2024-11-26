@@ -1,12 +1,12 @@
 # Default params for timelinejs
 
 [modules]
-    [modules.timelinejs3]
+    [modules.timelinejs]
         integration = "optional"
         disableTemplate = false
         state = "defer"
 
-    [modules.timelinejs3.csp]
+    [modules.timelinejs.csp]
         style-src = ["www.youtube.com"]
         font-src = ["fonts.gstatic.com"]
         frame-src = [

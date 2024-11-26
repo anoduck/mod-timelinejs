@@ -1,9 +1,9 @@
-module github.com/anoduck/mod-timelinejs3/exampleSite
+module github.com/anoduck/mod-timelinejs/exampleSite
 
 go 1.19
 
 require (
-	github.com/anoduck/mod-timelinejs3 v0.0.25 // indirect
+	github.com/anoduck/mod-timelinejs v0.0.25 // indirect
 	github.com/airbnb/lottie-web v5.12.2+incompatible // indirect
 	github.com/gethinode/mod-utils/v2 v2.8.3 // indirect
 	github.com/gethinode/mod-bootstrap v1.3.1 // indirect
