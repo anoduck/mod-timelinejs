@@ -1,8 +1,7 @@
 [modules]
-    core = ["bootstrap", "fontawesome"]
+    core = ["bootstrap"]
     optional = ["timelinejs"]
     excludeSCSS = ["bootstrap"]
-    disableTemplate = ["katex","mermaid","timelinejs"]
     [modules.timelinejs]
         integration = "optional"
         disableTemplate = false
@@ -23,13 +22,6 @@
             "*.cloudinary.com",
             "i.ytimg.com"
         ]
-    [modules.fontawesome]
-        inline = true
-        debug = true
-        skipMissing = false
-    [modules.utils]
-        filter = "[^0-9A-Za-z??�-� ;.,\\/'?\"]-"
-        raw = false   
 
 [debugging]
     showJS = true
