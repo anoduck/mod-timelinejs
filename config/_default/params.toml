@@ -1,3 +1,10 @@
+# Additional site Params
+# -------------------------
+# Comprehensive list of netlify's CSP content contexts:
+#  --> childSrc defaultSrc connectSrc fontSrc frameSrc imgSrc manifestSrc
+# mediaSrc objectSrc prefetchSrc scriptSrc scriptSrcElem scriptSrcAttr
+# styleSrc styleSrcElem styleSrcAttr workerSrc
+
 [modules]
     [modules.timelinejs]
         integration = "optional"
@@ -9,14 +16,33 @@
             "player.cloudinary.com",
             "www.youtube-nocookie.com",
             "www.youtube.com",
-            "www.vimeo.com"
+            "www.vimeo.com",
+            "*.x.com",
+            "*.twitter.com",
+            "*.wikipedia.com",
+            "play.spotify.com",
+            "maps.google.com",
+            "www.google.com"
         ]
         img-src = [
             "data:",
             "*.imgix.net",
             "*.imagekit.io",
             "*.cloudinary.com",
-            "i.ytimg.com"
+            "i.ytimg.com",
+            "*.x.com",
+            "*.twitter.com",
+            "www.youtube.com",
+            "instagram.com",
+            "imgur.com",
+            "www.flickr.com"
+        ]
+        media-src = [
+            "vimeo.com",
+            "www.dailymotion.com",
+            "*.x.com",
+            "play.spotify.com",
+            "soundcloud.com"
         ]
 
 [debugging]

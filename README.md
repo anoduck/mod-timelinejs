@@ -50,9 +50,15 @@ Data is stored in the `static` data in the form of a json file. More information
 
 To you a Google spreadsheet simply place the full url of the spreadsheet share link where you would place the json file, I.E. the `jsonFile` property. You can use [KnightLab's Template](https://docs.google.com/spreadsheets/d/1pHBvXN7nmGkiG8uQSUB82eNlnL8xHu6kydzH_-eguHQ/copy) to get started.
 
-| Setting                   | Default            | Description                                    |
-|---------------------------|--------------------|------------------------------------------------|
+### BlockId
+
+In order to tell the script where to generate the timeline, an "id" is provided. This id is assigned to the content block where the timeline is to generated using an "id" attribute. This module allows the user to define what value is given as the timeline's id. Which should, in theory, allow for more than one timelines per page if desired.
+
+
+| Setting                   | Default            | Description                                         |
+|---------------------------|--------------------|-----------------------------------------------------|
 | jsonFile                  | "timelinejs.json"  | The JSON file or Google Sheet containing event data |
+| blockId                   | "timeline-content" | The "id" attribute assigned to the timeline.        |
 
 The shortcode can be used with the following labeled arguments.
 
@@ -70,6 +76,7 @@ The shortcode can be used with the following labeled arguments.
 [Timelinejs Docs]: https://timeline.knightlab.com/docs/instantiate-a-timeline.html
 [This Module]: https://github.com/anoduck/mod-timleinejs3
 [SRI Hash]: https://www.srihash.org/
+[Google_CSP_Evaluator]: https://csp-evaluator.withgoogle.com/
 [repository]: https://github.com/gethinode/hinode.git
 [repository_template]: https://github.com/gethinode/template.git
 [conventionalcommits]: https://www.conventionalcommits.org
