@@ -1,9 +1,9 @@
 # Additional site Params
 # -------------------------
 # Comprehensive list of netlify's CSP content contexts:
-#  --> childSrc defaultSrc connectSrc fontSrc frameSrc imgSrc manifestSrc
-# mediaSrc objectSrc prefetchSrc scriptSrc scriptSrcElem scriptSrcAttr
-# styleSrc styleSrcElem styleSrcAttr workerSrc
+#  --> child-src, default-src, connect-src, font-src, frame-src, img-src, manifest-src
+# media-src, object-src, prefetch-src, script-src, script-srcElem, script-srcAttr,
+# style-src, style-srcElem, style-srcAttr, worker-src
 
 [modules]
     [modules.timelinejs]
@@ -22,7 +22,8 @@
             "*.wikipedia.com",
             "play.spotify.com",
             "maps.google.com",
-            "www.google.com"
+            "www.google.com",
+            "docs.google.com"
         ]
         img-src = [
             "data:",
@@ -35,14 +36,18 @@
             "www.youtube.com",
             "instagram.com",
             "imgur.com",
-            "www.flickr.com"
+            "www.flickr.com",
+            "docs.google.com",
+            "www.google.com"
         ]
         media-src = [
             "vimeo.com",
             "www.dailymotion.com",
             "*.x.com",
             "play.spotify.com",
-            "soundcloud.com"
+            "soundcloud.com",
+            "www.google.com",
+            "docs.google.com"
         ]
 
 [debugging]
