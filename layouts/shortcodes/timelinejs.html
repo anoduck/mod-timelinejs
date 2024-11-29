@@ -25,18 +25,18 @@
 
 <!-- Inject div element -->
 {{ with $blockId }}
-    <div id="{{ . }}" style="height: 600px; width: 100%"></div>
+  <div id="{{ . }}" style="height: 600px; width: 100%;"></div>
 {{ end }}
 
 <!-- This instantiates the timelinejs element. -->
 <script type="text/javascript">
-    document.addEventListener("DOMContentLoaded", function() {
-        window.timeline = new TL.Timeline(
-            {{ with $blockId }}
-                '{{ . }}',
-            {{ end }}
-            {{ with $jsonFile }}
-                '{{ . }}')
-            {{ end }}
-    });
+  document.addEventListener("DOMContentLoaded", function () {
+    window.timeline = new TL.Timeline(
+      {{ with $blockId }}
+        '{{ . }}',
+      {{ end }}
+      {{ with $jsonFile }}
+        '{{ . }}'
+      {{ end }}
+    )});
 </script>
