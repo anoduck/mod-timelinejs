@@ -1,48 +1,34 @@
 {
-  "name": "@anoduck/mod-timelinejs",
-  "version": "0.0.37",
-  "description": "A Hinode Module to allow users of hinode to use the timelinejs library for more dynamic timelines.",
-  "keywords": [
-    "hugo",
-    "module",
-    "timeline"
-  ],
-  "main": "index.js",
-  "publishConfig": {
-    "access": "public",
-    "registry": "https://registry.npmjs.org/"
-  },
-  "scripts": {
-    "prestart": "npm run clean && npm run mod:vendor",
-    "start": "hugo server -s exampleSite --bind=0.0.0.0 --disableFastRender --printI18nWarnings",
-    "prebuild": "npm run clean && npm run mod:vendor",
-    "build": "hugo --gc --minify -s exampleSite",
-    "clean": "rimraf exampleSite/public exampleSite/resources",
-    "mod:clean": "hugo mod clean",
-    "mod:update": "rimraf _vendor && hugo mod get -u ./... && hugo mod get -u && npm run -s mod:vendor && npm run -s mod:tidy",
-    "mod:tidy": "hugo mod tidy",
-    "mod:vendor": "rimraf _vendor && hugo mod vendor",
-    "postinstall": "npm run -s copy:scss && npm run -s copy:css && npm run -s copy:js && npm run -s copy:font && npm run -s copy:icons &&  npm run -s copy:rexrep",
-    "copy:css": "cpy node_modules/@knight-lab/timelinejs/dist/css/timeline.css dist/scss/modules/timelinejs --rename=timeline.scss --flat",
-    "copy:scss": "cpy assets/scss/timelinejs.scss dist/scss --flat",
-    "copy:js": "cpy node_modules/@knight-lab/timelinejs/dist/js/timeline.js dist/js --flat",
-    "copy:font": "cpy node_modules/@knight-lab/timelinejs/dist/css/fonts/font.default.css dist/scss/modules/timelinejs --rename=font.default.scss --flat",
-    "copy:icons": "cpy node_modules/@knight-lab/timelinejs/dist/css/icons/tl-icons.* dist/icons --flat",
-    "copy:rexrep": "rexreplace '../js/../css/icons/' '/icons/' dist/scss/modules/timelinejs/timeline.scss",
-    "test": "npm run -s build",
-    "upgrade": "npx npm-check-updates -u && npm run -s mod:update",
-    "prepare": "node .husky/install.mjs"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/anoduck/mod-timelinejs.git"
-  },
   "author": "Anoduck, The Anonymous Duck",
-  "license": "MIT",
   "bugs": {
     "url": "https://github.com/anoduck/mod-timelinejs/issues"
   },
-  "homepage": "https://anoduck.com",
+  "comments": {
+    "dependencies": {},
+    "devDependencies": {
+      "@commitlint/cli": "project",
+      "@commitlint/config-conventional": "project",
+      "@knight-lab/timelinejs": "project",
+      "@semantic-release/exec": "project",
+      "@semantic-release/git": "project",
+      "commitizen": "project",
+      "cpy-cli": "project",
+      "cz-conventional-changelog": "project",
+      "diff": "project",
+      "hugo-bin": "project",
+      "husky": "project",
+      "rexreplace": "project",
+      "rimraf": "project",
+      "semantic-release": "project"
+    }
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "dependencies": {},
+  "description": "A Hinode Module to allow users of hinode to use the timelinejs library for more dynamic timelines.",
   "devDependencies": {
     "@commitlint/cli": "^19.6.0",
     "@commitlint/config-conventional": "^19.6.0",
@@ -59,8 +45,21 @@
     "rimraf": "^6.0.1",
     "semantic-release": "^24.2.0"
   },
+  "homepage": "https://anoduck.com",
   "hugo-bin": {
     "buildTags": "extended"
+  },
+  "keywords": [
+    "hugo",
+    "module",
+    "timeline"
+  ],
+  "license": "MIT",
+  "main": "index.js",
+  "name": "@anoduck/mod-timelinejs",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
   },
   "release": {
     "branches": "main",
@@ -88,9 +87,30 @@
       ]
     ]
   },
-  "config": {
-    "commitizen": {
-      "path": "./node_modules/cz-conventional-changelog"
-    }
-  }
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anoduck/mod-timelinejs.git"
+  },
+  "scripts": {
+    "build": "hugo --gc --minify -s exampleSite",
+    "clean": "rimraf exampleSite/public exampleSite/resources",
+    "copy:css": "cpy node_modules/@knight-lab/timelinejs/dist/css/timeline.css dist/scss/modules/timelinejs --rename=timeline.scss --flat",
+    "copy:font": "cpy node_modules/@knight-lab/timelinejs/dist/css/fonts/font.default.css dist/scss/modules/timelinejs --rename=font.default.scss --flat",
+    "copy:icons": "cpy node_modules/@knight-lab/timelinejs/dist/css/icons/tl-icons.* dist/icons --flat",
+    "copy:js": "cpy node_modules/@knight-lab/timelinejs/dist/js/timeline.js dist/js --flat",
+    "copy:rexrep": "rexreplace '../js/../css/icons/' '/icons/' dist/scss/modules/timelinejs/timeline.scss",
+    "copy:scss": "cpy assets/scss/timelinejs.scss dist/scss --flat",
+    "mod:clean": "hugo mod clean",
+    "mod:tidy": "hugo mod tidy",
+    "mod:update": "rimraf _vendor && hugo mod get -u ./... && hugo mod get -u && npm run -s mod:vendor && npm run -s mod:tidy",
+    "mod:vendor": "rimraf _vendor && hugo mod vendor",
+    "postinstall": "npm run -s copy:scss && npm run -s copy:css && npm run -s copy:js && npm run -s copy:font && npm run -s copy:icons &&  npm run -s copy:rexrep",
+    "prebuild": "npm run clean && npm run mod:vendor",
+    "prepare": "node .husky/install.mjs",
+    "prestart": "npm run clean && npm run mod:vendor",
+    "start": "hugo server -s exampleSite --bind=0.0.0.0 --disableFastRender --printI18nWarnings",
+    "test": "npm run -s build",
+    "upgrade": "npx npm-check-updates -u && npm run -s mod:update"
+  },
+  "version": "0.0.38"
 }

@@ -1,2 +1,10 @@
 @use 'modules/timelinejs/timeline.scss';
 @use 'modules/timelinejs/font.default.scss';
+
+.mod-timeline {
+    display: block;
+    height: 600px;
+    margin: auto calc(50% - 50vw);
+    width: 150%;
+    transform: translateX(calc(50vw - 50%));
+}
