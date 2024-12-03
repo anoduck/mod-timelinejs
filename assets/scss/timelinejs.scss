@@ -1,10 +1,27 @@
 @use 'modules/timelinejs/timeline.scss';
 @use 'modules/timelinejs/font.default.scss';
 
-.mod-timeline {
-    display: block;
-    height: 600px;
-    margin: auto calc(50% - 50vw);
-    width: 150%;
+@mixin mod-timeline($container-width, $max-width: null) {
+  height: 600px;
+
+  @if not $container-width or not $max-width {
+    // Longhand, because you may not want to override existing vertical margins
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+    // The required math gets really ugly without this, but you were using it anyway, right?
+    box-sizing: border-box;
+  }
+
+  @else {
+    width: if($max-width, $max-width, null);
+    // Non-Firefox browsers include the scrollbar in `vw`, be careful; maybe set this to 98vw depending on your site.
+    max-width: 98vw;
     transform: translateX(calc(50vw - 50%));
+
+    @media (min-width: $container-width) {
+      // Longhand, because you may not want to override existing vertical margins
+      margin-left: calc(50% - 50vw);
+      margin-right: calc(50% - 50vw);
+    }
+  }
 }
