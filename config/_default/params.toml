@@ -8,7 +8,8 @@
 [modules]
     [modules.timelinejs]
         integration = "optional"
-        state = "defer"
+        state = "async"
+        category = "functional"
     [modules.timelinejs.csp]
         style-src = ["www.youtube.com"]
         font-src = ["fonts.gstatic.com"]
