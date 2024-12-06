@@ -29,5 +29,6 @@
 </div>
 <!-- This instantiates the timelinejs element. -->
 <script type="text/javascript">
-  timeline = new TL.Timeline({{ $blockId | safeJSStr }},{{ $jsonFile | safeJSStr }});
+  document.addEventListener("DOMContentLoaded", function () {
+    window.timeline = new TL.Timeline({{ $blockId | safeJSStr }},{{ $jsonFile | safeJSStr }})});
 </script>
