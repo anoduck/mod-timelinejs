@@ -112,5 +112,5 @@
     "test": "npm run -s build",
     "upgrade": "npx npm-check-updates -u && npm run -s mod:update"
   },
-  "version": "0.0.43"
+  "version": "0.0.44"
 }

@@ -9,7 +9,7 @@
     [modules.timelinejs]
         integration = "optional"
         state = "async"
-        category = "functional"
+        category = "other"
     [modules.timelinejs.csp]
         style-src = ["www.youtube.com"]
         font-src = ["fonts.gstatic.com"]
