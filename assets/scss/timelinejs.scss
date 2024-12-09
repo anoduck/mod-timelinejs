@@ -1,9 +1,8 @@
-@use 'modules/timelinejs/timeline.scss';
-@use 'modules/timelinejs/font.default.scss';
+@forward 'modules/timelinejs/timeline.scss';
+@forward 'modules/timelinejs/font.default.scss';
 
-@mixin mod-timeline($container-width, $max-width: null) {
-  height: 600px;
-
+@mixin mod-timeline($container-width, $max-width: null, $container-height, $max-height: null) {
+  // First we will do width
   @if not $container-width or not $max-width {
     // Longhand, because you may not want to override existing vertical margins
     margin-left: calc(50% - 50vw);
@@ -23,5 +22,24 @@
       margin-left: calc(50% - 50vw);
       margin-right: calc(50% - 50vw);
     }
+
+  // Next we will do height
+  @if not $container-height or not $max-height {
+    // Just applying the same thing to height
+    margin-top: calc(50% - 50vh);
+    margin-bottom: calc(50% - 50vh);
+    box-sizing: border-box;
+  }
+
+  @else {
+    height: if($max-height, $max-height: null);
+    max-height: 98vh;
+    transform: translateY(calc(50vh - 50%));
+
+    @media (min-height: $container-height) {
+      margin-top: calc(50% - 50vh);
+      margin-bottom: calc(50% - 50vh);
+    }
+  }
   }
 }
