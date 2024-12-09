@@ -25,8 +25,12 @@
 
 <!-- Inject div element -->
 <div class="mod-timeline">
-  <div id={{ $blockId | safeHTML }}></div>
+  <div style="height: 650px;" id={{ $blockId | safeHTML }}></div>
 </div>
+
+<!-- This loads the required javascript library. -->
+<script src="/js/timeline.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
 <!-- This instantiates the timelinejs element. -->
 <script type="text/javascript">
   document.addEventListener("DOMContentLoaded", function () {

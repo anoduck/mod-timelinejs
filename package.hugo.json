@@ -24,7 +24,6 @@
     "mod:vendor": "rimraf _vendor && hugo mod vendor",
     "postinstall": "npm run -s copy:scss && npm run -s copy:css && npm run -s copy:js && npm run -s copy:font && npm run -s copy:icons &&  npm run -s copy:rexrep",
     "copy:css": "cpy node_modules/@knight-lab/timelinejs/dist/css/timeline.css dist/scss/modules/timelinejs --rename=timeline.scss --flat",
-    "copy:scss": "cpy assets/scss/timelinejs.scss dist/scss --flat",
     "copy:js": "cpy node_modules/@knight-lab/timelinejs/dist/js/timeline.js dist/js --flat",
     "copy:font": "cpy node_modules/@knight-lab/timelinejs/dist/css/fonts/font.default.css dist/scss/modules/timelinejs --rename=font.default.scss --flat",
     "copy:icons": "cpy node_modules/@knight-lab/timelinejs/dist/css/icons/tl-icons.* dist/icons --flat",

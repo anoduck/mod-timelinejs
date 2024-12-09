@@ -1,8 +1,8 @@
-@use 'modules/timelinejs/timeline.scss';
-@use 'modules/timelinejs/font.default.scss';
+@forward 'modules/timelinejs/timeline.scss';
+@forward 'modules/timelinejs/font.default.scss';
 
 @mixin mod-timeline($container-width, $max-width: null) {
-  height: 600px;
+  height: 65vh;
 
   @if not $container-width or not $max-width {
     // Longhand, because you may not want to override existing vertical margins

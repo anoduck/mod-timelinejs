@@ -9,6 +9,7 @@ title = 'Test site for mod-timelinejs'
   # Build and serve using local mod-timelinejs clone declared in the named Hugo workspace:
   workspace = "mod-timelinejs.work"
   replacements = "github.com/anoduck/mod-timelinejs -> ../.."
-
+  [[module.imports]]
+    path = "github.com/gethinode/hinode"
   [[module.imports]]
     path = "github.com/anoduck/mod-timelinejs"

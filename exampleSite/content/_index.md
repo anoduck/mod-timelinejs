@@ -4,7 +4,7 @@ description: Site to test module shortcode(s).
 date: 2023-07-10
 ---
 
-### There should be a fancy Timeline element below.
+__There should be a fancy Timeline element below.__
 
 {{< timelinejs blockId="timeline-element" jsonFile="timelinejs.json" >}}
 
