@@ -1,16 +1,20 @@
-{{- $filename := .filename | default "js/main.bundle.js" -}}
-{{- $match := .match | default "js/**.js" -}}
+<!-- This file concatenates JS resources together -->
+<!-- $target refers to hinode's Javascript files, and main.bundle.js is required -->
+{{- $target := .filename | default "js/main.bundle.js" -}}
+<!-- Your file is actually included in the glob below. -->
+{{- $module := .match | default "js/**.js" -}}
 {{- $page := .page -}}
 
-{{- warnf "Processing js pattern: %s" $match -}}
-{{ $files := sort (resources.Match $match) "Key" "asc" }}
+{{- warnf "Processing js pattern: %s" $module -}}
+{{ $files := sort (resources.Match $module) "Key" "asc" }}
 {{- range $index, $file := $files -}}
 {{- warnf " - Processing file: %s" $file.Key }}
 {{- end -}}
 
 {{ if gt (len $files) 0 }}
-{{ $bundle := $files | resources.Concat $filename -}}
-{{ $js := $bundle | resources.ExecuteAsTemplate $filename $page -}}
+
+{{ $bundle := $files | resources.Concat $target -}}
+{{ $js := $bundle | resources.ExecuteAsTemplate $target $page -}}
 
 <script src="{{ $js.Permalink }}"></script>
 {{ end -}}

@@ -6,9 +6,6 @@
 # style-src, style-srcElem, style-srcAttr, worker-src
 
 [modules]
-    [modules.timelinejs]
-        integration = "optional"
-        state = "async"
     [modules.timelinejs.csp]
         style-src = ["www.youtube.com"]
         font-src = ["fonts.gstatic.com"]

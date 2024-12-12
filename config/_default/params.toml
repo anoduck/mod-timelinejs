@@ -1,7 +1,0 @@
-# default configuration for TimelineJs
-
-[modules]
-    [modules.timelinejs]
-        integration = "optional"
-        disableTemplate = true
-        state = "defer"

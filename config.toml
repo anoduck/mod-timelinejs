@@ -1,20 +1,11 @@
-[markup.goldmark.renderer]
-  unsafe = true
-
 [module]
   [module.hugoVersion]
     extended = true
     min = "0.110.0"
     max = ""
   [[module.mounts]]
-    source = "dist/js/timeline.js"
-    target = "assets/js/timeline.js"
-  [[module.mounts]]
-    source = "dist/scss/modules/timelinejs"
-    target = "assets/scss/modules/timelinejs"
-  [[module.mounts]]
-    source = "dist/icons"
-    target = "static/icons"
+    source = "assets"
+    target = "assets"
   [[module.mounts]]
     source = 'layouts'
     target = 'layouts'
@@ -22,5 +13,18 @@
     source = "static"
     target = "static"
   [[module.mounts]]
-    source = "assets"
-    target = "assets"
+    source = "dist/scss/modules/timelinejs"
+    target = "assets/scss/modules/timelinejs"
+  [[module.mounts]]
+    source = "dist/js/timeline.js"
+    target = "assets/js/timeline.js"
+  [[module.mounts]]
+    source = "dist/icons"
+    target = "static/icons"
+
+[params.modules.timelinejs]
+  integration = "optional"
+  state = "async"
+  embed = true
+  inline = true
+  debug = true
