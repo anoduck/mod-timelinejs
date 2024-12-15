@@ -1,7 +1,7 @@
-@forward 'modules/timelinejs/timeline.scss';
-@forward 'modules/timelinejs/font.default.scss';
+// @use 'modules/timelinejs/timeline.scss';
+// @use 'modules/timelinejs/font.default.scss';
 
-@mixin mod-timeline($container-width, $max-width: null, $container-height, $max-height: null) {
+@mixin mod-timeline($container-width, $container-height, $max-width: null, $max-height: null) {
   // First we will do width
   @if not $container-width or not $max-width {
     // Longhand, because you may not want to override existing vertical margins
@@ -12,7 +12,7 @@
   }
 
   @else {
-    width: if($max-width, $max-width, null);
+    width: if($max-width, $max-width: null);
     // Non-Firefox browsers include the scrollbar in `vw`, be careful; maybe set this to 98vw depending on your site.
     max-width: 98vw;
     transform: translateX(calc(50vw - 50%));
@@ -22,24 +22,24 @@
       margin-left: calc(50% - 50vw);
       margin-right: calc(50% - 50vw);
     }
-
-  // Next we will do height
-  @if not $container-height or not $max-height {
-    // Just applying the same thing to height
-    margin-top: calc(50% - 50vh);
-    margin-bottom: calc(50% - 50vh);
-    box-sizing: border-box;
   }
+  height: 650px;
+  // // Next we will do height
+  // @if not $container-height or not $max-height {
+  //   // Just applying the same thing to height
+  //   margin-top: calc(50% - 50vh);
+  //   margin-bottom: calc(50% - 50vh);
+  //   box-sizing: border-box;
+  // }
 
-  @else {
-    height: if($max-height, $max-height: null);
-    max-height: 98vh;
-    transform: translateY(calc(50vh - 50%));
+  // @else {
+  //   height: if($max-height, $max-height: null);
+  //   max-height: 98vh;
+  //   transform: translateY(calc(50vh - 50%));
 
-    @media (min-height: $container-height) {
-      margin-top: calc(50% - 50vh);
-      margin-bottom: calc(50% - 50vh);
-    }
-  }
-  }
+  //   @media (min-height: $container-height) {
+  //     margin-top: calc(50% - 50vh);
+  //     margin-bottom: calc(50% - 50vh);
+  //   }
+  // }
 }

@@ -25,10 +25,9 @@
 
 <!-- Inject div element -->
 <div class="mod-timeline">
-  <div id={{ $blockId | safeHTML }}></div>
+  <div id={{ $blockId | safeHTML }} data-name={{ $jsonFile | safeHTML }}></div>
 </div>
 <!-- This instantiates the timelinejs element. -->
-<script type="text/javascript">
-  document.addEventListener("DOMContentLoaded", function () {
-    window.timeline = new TL.Timeline({{ $blockId | safeJSStr }},{{ $jsonFile | safeJSStr }})});
-</script>
+{{/* <script type="text/javascript">
+  document.addEventListener("DOMContentLoaded", function () {window.timeline = new TL.Timeline({{ $blockId | safeJSStr }},{{ $jsonFile | safeJSStr }})});
+</script> */}}
