@@ -32,7 +32,7 @@
   "devDependencies": {
     "@commitlint/cli": "^19.6.0",
     "@commitlint/config-conventional": "^19.6.0",
-    "@knight-lab/timelinejs": "^3.9.5",
+    "@knight-lab/timelinejs": "3.9.4",
     "@semantic-release/exec": "^6.0.3",
     "@semantic-release/git": "^10.0.1",
     "commitizen": "^4.3.1",
@@ -97,14 +97,13 @@
     "copy:css": "cpy node_modules/@knight-lab/timelinejs/dist/css/timeline.css dist/scss/modules/timelinejs --rename=timeline.scss --flat",
     "copy:font": "cpy node_modules/@knight-lab/timelinejs/dist/css/fonts/font.default.css dist/scss/modules/timelinejs --rename=font.default.scss --flat",
     "copy:icons": "cpy node_modules/@knight-lab/timelinejs/dist/css/icons/tl-icons.* dist/icons --flat",
-    "copy:js": "cpy node_modules/@knight-lab/timelinejs/dist/js/timeline.js dist/js --flat",
+    "copy:js": "cpy node_modules/@knight-lab/timelinejs/dist/js/timeline.js dist/js/timeline.js --flat",
     "copy:rexrep": "rexreplace '../js/../css/icons/' '/icons/' dist/scss/modules/timelinejs/timeline.scss",
-    "copy:scss": "cpy assets/scss/timelinejs.scss dist/scss --flat",
     "mod:clean": "hugo mod clean",
     "mod:tidy": "hugo mod tidy",
     "mod:update": "rimraf _vendor && hugo mod get -u ./... && hugo mod get -u && npm run -s mod:vendor && npm run -s mod:tidy",
     "mod:vendor": "rimraf _vendor && hugo mod vendor",
-    "postinstall": "npm run -s copy:scss && npm run -s copy:css && npm run -s copy:js && npm run -s copy:font && npm run -s copy:icons &&  npm run -s copy:rexrep",
+    "postinstall": "npm run -s copy:css && npm run -s copy:js && npm run -s copy:font && npm run -s copy:icons && npm run -s copy:rexrep",
     "prebuild": "npm run clean && npm run mod:vendor",
     "prepare": "node .husky/install.mjs",
     "prestart": "npm run clean && npm run mod:vendor",
@@ -112,5 +111,5 @@
     "test": "npm run -s build",
     "upgrade": "npx npm-check-updates -u && npm run -s mod:update"
   },
-  "version": "0.0.46"
+  "version": "0.0.47"
 }

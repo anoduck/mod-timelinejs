@@ -44,7 +44,7 @@ This module is configured to act as a shortcode, thus only loading the timelinej
 
 ### Json or Google Spreadsheet
 
-You can use a JSON file or a Google spreadsheet to provide the data, because the src code syntax is exactly the same for both. 
+You can use a JSON file or a Google spreadsheet to provide the data, because the src code syntax is exactly the same for both.
 
 Data is stored in the `static` data in the form of a json file. More information about the format of the json file can be found on [KnightLab's webiste](https://timeline.knightlab.com/docs/json-format.html). The shortcode only takes two arguments, which are described below.
 
