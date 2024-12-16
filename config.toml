@@ -7,9 +7,6 @@
     min = "0.110.0"
     max = ""
   [[module.mounts]]
-    source = "assets"
-    target = "assets"
-  [[module.mounts]]
     source = 'layouts'
     target = 'layouts'
   [[module.mounts]]
@@ -17,7 +14,7 @@
     target = "static"
   [[module.mounts]]
     source = "dist/js/timeline.js"
-    target = "assets/js/timeline.js"
+    target = "assets/js/modules/timelinejs/timeline.js"
   [[module.mounts]]
     source = "dist/scss/modules/timelinejs"
     target = "assets/scss/modules/timelinejs"

@@ -4,12 +4,14 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0">
   <title>{{ with .Title }}{{ printf "%s | " . }}{{ end }}{{ site.Title }}</title>
-  {{- partial "head/stylesheet.html" -}}
+  <link rel="stylesheet" href="/timeline.css">
+  <link rel="stylesheet" href="/font.default.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 {{ block "main" . }}
 
 {{ end }}
-{{- partial "footer/scripts.html" -}}
+<script src="/js/timeline.js"></script>
 </body>
 </html>
