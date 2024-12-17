@@ -26,6 +26,7 @@
 
 [params.modules.timelinejs]
   integration = "optional"
+  disableTemplate = true
   state = "async"
 
 [params.modules.timelinejs.csp]
