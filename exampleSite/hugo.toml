@@ -16,10 +16,10 @@ title = 'Test site for mod-timelinejs'
   [[module.imports]]
     path = "github.com/anoduck/mod-timelinejs"
   [[module.imports.mounts]]
-    source = "dist/scss/modules/timelinejs/timeline.scss"
+    source = "dist/scss/timeline.scss"
     target = "static/timeline.css"
   [[module.imports.mounts]]
-    source = "dist/scss/modules/timelinejs/font.default.scss"
+    source = "dist/scss/font.default.scss"
     target = "static/font.default.css"
   [[module.imports.mounts]]
     source = "dist/js/timeline.js"

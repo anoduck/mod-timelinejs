@@ -16,7 +16,7 @@
     source = "dist/js/timeline.js"
     target = "assets/js/modules/timelinejs/timeline.js"
   [[module.mounts]]
-    source = "dist/scss/modules/timelinejs"
+    source = "dist/scss"
     target = "assets/scss/modules/timelinejs"
   [[module.mounts]]
     source = "dist/icons"
