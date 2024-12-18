@@ -24,9 +24,7 @@
 {{- $jsonFile := .Get "jsonFile" | default "timelinejs.json" -}}
 
 <!-- Inject div element -->
-<div class="mod-timeline">
-  <div id={{ $blockId | safeHTML }} data-name={{ $jsonFile | safeHTML }}></div>
-</div>
+<div class="mod-timeline" id={{ $blockId | safeHTML }}></div>
 
 <!-- This instantiates the timelinejs element. -->
 <script type="text/javascript">
