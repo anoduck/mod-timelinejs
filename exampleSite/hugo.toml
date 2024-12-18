@@ -19,11 +19,9 @@ title = 'Test site for mod-timelinejs'
     source = "dist/scss/timeline.scss"
     target = "static/timeline.css"
   [[module.imports.mounts]]
-    source = "dist/scss/font.default.scss"
-    target = "static/font.default.css"
-  [[module.imports.mounts]]
-    source = "dist/js/timeline.js"
-    target = "static/js/timeline.js"
+    source = "dist/js"
+    target = "static/js"
+    includeFiles = "timeline.js"
   [[module.imports.mounts]]
     source = "dist/icons"
     target = "static/icons"
