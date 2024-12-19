@@ -11,6 +11,9 @@
     target = "assets/js"
     includeFiles = "timeline.js"
   [[module.mounts]]
+    source = "contrib/autoload.js"
+    target = "assets/autoload.js"
+  [[module.mounts]]
     source = "dist/scss"
     target = "assets/scss"
     includeFiles = "timeline.scss"
