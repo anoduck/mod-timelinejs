@@ -23,6 +23,9 @@ title = 'Test site for mod-timelinejs'
     target = "static/js"
     includeFiles = "timeline.js"
   [[module.imports.mounts]]
+    source = "contrib/autoload.js"
+    target = "static/js/autoload.js"
+  [[module.imports.mounts]]
     source = "dist/icons"
     target = "static/icons"
   [[module.imports.mounts]]
