@@ -10,27 +10,5 @@ title = 'Test site for mod-timelinejs'
   workspace = "mod-timelinejs.work"
   replacements = "github.com/anoduck/mod-timelinejs -> ../.."
 
-  [[module.mounts]]
-    source = "static"
-    target = "static"
   [[module.imports]]
     path = "github.com/anoduck/mod-timelinejs"
-  [[module.imports.mounts]]
-    source = "dist/scss/timeline.scss"
-    target = "static/timeline.css"
-  [[module.imports.mounts]]
-    source = "dist/js"
-    target = "static/js"
-    includeFiles = "timeline.js"
-  [[module.imports.mounts]]
-    source = "contrib/autoload.js"
-    target = "static/js/autoload.js"
-  [[module.imports.mounts]]
-    source = "dist/icons"
-    target = "static/icons"
-  [[module.imports.mounts]]
-    source = 'layouts'
-    target = 'layouts'
-  [[module.imports.mounts]]
-    source = "assets"
-    target = "assets"
