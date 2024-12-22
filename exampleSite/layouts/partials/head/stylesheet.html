@@ -8,14 +8,10 @@
     {{- $files = $files | append $file -}}
 {{- end -}}
 
-{{ if gt (len $files) 0 }}
-{{ $bundle := $files | resources.Concat $target -}}
 {{- $options := (dict "transpiler" "dartsass" "targetPath" $target) -}}
 {{- $options = merge $options (dict "outputStyle" "expanded") -}}
 
-{{/* {{- $css := resources.GetMatch $source | resources.ExecuteAsTemplate "style.app.scss" . | toCSS $options -}} */}}
-{{- $css := $bundle | resources.ExecuteAsTemplate "style.app.scss" . | toCSS $options -}}
+{{- $css := resources.GetMatch $source | resources.ExecuteAsTemplate "style.app.scss" . | toCSS $options -}}
 
 <link rel="stylesheet" href="{{ $css.Permalink }}" crossorigin="anonymous" type="text/css">
 <link rel="stylesheet" href="/style.css">
-{{ end -}}
