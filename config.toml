@@ -25,6 +25,10 @@
     source = "dist/icons"
     target = "static/icons"
 
+[params.modules.timelinejs]
+  integration = "optional"
+  state = "async"
+
 [params.modules.timelinejs.csp]
   [modules.timelinejs.csp]
     style-src = ["www.youtube.com"]
