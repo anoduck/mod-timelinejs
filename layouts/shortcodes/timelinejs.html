@@ -21,10 +21,10 @@
 
 <!-- Define Variables -->
 {{- $blockId := .Get "blockId" | default "timeline-element" -}}
-{{- $jsonFile := .Get "jsonFile" | default "timelinejs.json" -}}
+{{- $jsonFile := .Get "jsonFile" | default "/timelinejs.json" -}}
 
 <!-- Inject div element -->
-<div class="tl-container">
-    <div class="mod-timeline" id={{ $blockId | safeHTML }} data-name={{ $jsonFile | safeHTML }}></div>
+<div class="tl-container" id="timeline-container">
+    <div id={{ $blockId | safeHTML }} data-name={{ $jsonFile | safeHTML }}></div>
 </div>
 

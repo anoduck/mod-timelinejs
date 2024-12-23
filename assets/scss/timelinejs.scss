@@ -2,17 +2,17 @@
 @use 'modules/timelinejs/font.default.scss';
 
 tl-timenav {
-  height: 150px;
+  min-height: 150px;
   pointer-events: none;
 }
 
 tl-storyslider {
-  height: 400px;
+  min-height: 400px;
   pointer-events: none;
 }
 
 @mixin tl-container($container-width, $max-width: null) {
-  height: 675px;
+  min-height: 675px;
   pointer-events: none;
   // First we will do width
   @if not $container-width or not $max-width {
