@@ -1,6 +1,2 @@
-@use 'modules/timelinejs/timeline.scss';
-@use 'modules/timelinejs/font.default.scss';
-
-tl-container {
-  pointer-events: none;
-}
+@import 'modules/timelinejs/timeline.scss';
+@import 'modules/timelinejs/font.default.scss';

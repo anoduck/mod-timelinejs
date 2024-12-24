@@ -6,7 +6,6 @@ let scripts = document.getElementsByTagName('script');
 let jsPath = scripts[scripts.length-1].src;
 
 let Options ={
-    height: 650,
     script_path: jsPath,
     debug: false
 };
