@@ -16,14 +16,16 @@
     source = "static"
     target = "static"
   [[module.mounts]]
-    source = "dist/js/timeline.js"
-    target = "assets/js/modules/timelinejs/timeline.js"
-  [[module.mounts]]
-    source = "dist/scss/modules/timelinejs"
+    source = "dist/scss"
     target = "assets/scss/modules/timelinejs"
+  [[module.mounts]]
+    source = "dist/js"
+    target = "assets/js/modules/timelinejs"
   [[module.mounts]]
     source = "dist/icons"
     target = "static/icons"
+  [[module.imports]]
+    path = "github.com/gethinode/mod-utils/v2"
 
 [params.modules.timelinejs]
   integration = "optional"
