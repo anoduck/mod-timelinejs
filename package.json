@@ -1,6 +1,6 @@
 {
   "name": "@anoduck/mod-timelinejs",
-  "version": "0.0.57",
+  "version": "0.0.58",
   "description": "A Hinode Module to allow users of hinode to use the timelinejs library for more dynamic timelines.",
   "keywords": [
     "hugo",
@@ -22,13 +22,14 @@
     "mod:update": "rimraf _vendor && hugo mod get -u ./... && hugo mod get -u && npm run -s mod:vendor && npm run -s mod:tidy",
     "mod:tidy": "hugo mod tidy",
     "mod:vendor": "rimraf _vendor && hugo mod vendor",
-    "postinstall": "npm run -s copy:scss && npm run -s copy:css && npm run -s copy:js && npm run -s copy:font && npm run -s copy:icons &&  npm run -s copy:rexrep",
-    "copy:css": "cpy node_modules/@knight-lab/timelinejs/dist/css/timeline.css dist/scss/modules/timelinejs --rename=timeline.scss --flat",
-    "copy:scss": "cpy assets/scss/timelinejs.scss dist/scss --flat",
+    "postinstall": "npm run -s copy:scss && npm run -s copy:css && npm run -s copy:js && npm run -s copy:ajs && npm run -s copy:font && npm run -s copy:icons &&  npm run -s copy:rexrep",
+    "copy:scss": "cpy contrib/scss/timelinejs.scss assets/scss --flat",
+    "copy:css": "cpy node_modules/@knight-lab/timelinejs/dist/css/timeline.css dist/scss --rename=timeline.scss --flat",
     "copy:js": "cpy node_modules/@knight-lab/timelinejs/dist/js/timeline.js dist/js --flat",
-    "copy:font": "cpy node_modules/@knight-lab/timelinejs/dist/css/fonts/font.default.css dist/scss/modules/timelinejs --rename=font.default.scss --flat",
+    "copy:ajs": "cpy contrib/js/autoload.js dist/js --flat",
+    "copy:font": "cpy node_modules/@knight-lab/timelinejs/dist/css/fonts/font.default.css dist/scss --rename=font.default.scss --flat",
     "copy:icons": "cpy node_modules/@knight-lab/timelinejs/dist/css/icons/tl-icons.* dist/icons --flat",
-    "copy:rexrep": "rexreplace '../js/../css/icons/' '/icons/' dist/scss/modules/timelinejs/timeline.scss",
+    "copy:rexrep": "rexreplace '../js/../css/icons/' '/icons/' dist/scss/timeline.scss",
     "test": "npm run -s build",
     "upgrade": "npx npm-check-updates -u && npm run -s mod:update",
     "prepare": "node .husky/install.mjs"
@@ -111,6 +112,5 @@
       "rimraf": "project",
       "semantic-release": "project"
     }
-  },
-  "dependencies": {}
+  }
 }
