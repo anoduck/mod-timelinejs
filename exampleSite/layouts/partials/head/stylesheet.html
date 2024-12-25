@@ -8,7 +8,7 @@
     {{- $files = $files | append $file -}}
 {{- end -}}
 
-{{- $options := (dict "transpiler" "dartsass" "targetPath" $target) -}}
+{{- $options := (dict "transpiler" "libsass" "targetPath" $target) -}}
 {{- $options = merge $options (dict "outputStyle" "expanded") -}}
 
 {{- $css := resources.GetMatch $source | resources.ExecuteAsTemplate "style.app.scss" . | toCSS $options -}}
