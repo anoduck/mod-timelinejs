@@ -28,8 +28,7 @@
     path = "github.com/gethinode/mod-utils/v2"
 
 [params.modules.timelinejs]
-  integration = "optional"
-  state = "async"
+  integration = "core"
 
 [params.modules.timelinejs.csp]
   [modules.timelinejs.csp]
