@@ -16,8 +16,8 @@
     source = "static"
     target = "static"
   [[module.mounts]]
-    source = "dist/scss"
-    target = "assets/scss/modules/timelinejs"
+    source = "dist/scss/dist"
+    target = "assets/scss"
   [[module.mounts]]
     source = "dist/js"
     target = "assets/js/modules/timelinejs"

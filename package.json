@@ -1,6 +1,6 @@
 {
   "name": "@anoduck/mod-timelinejs",
-  "version": "0.0.63",
+  "version": "0.0.64",
   "description": "A Hinode Module to allow users of hinode to use the timelinejs library for more dynamic timelines.",
   "keywords": [
     "hugo",
@@ -22,16 +22,22 @@
     "mod:update": "rimraf _vendor && hugo mod get -u ./... && hugo mod get -u && npm run -s mod:vendor && npm run -s mod:tidy",
     "mod:tidy": "hugo mod tidy",
     "mod:vendor": "rimraf _vendor && hugo mod vendor",
-    "postinstall": "npm run -s copy:css && npm run -s copy:js && npm run -s copy:ajs && npm run -s copy:font && npm run -s copy:icons &&  npm run -s copy:rexrep",
-    "copy:css": "cpy node_modules/@knight-lab/timelinejs/dist/css/timeline.css dist/scss --rename=timeline.scss --flat",
+    "postinstall": "npm run -s copy:css && npm run -s copy:js && npm run -s copy:ajs && npm run -s copy:font && npm run -s copy:icons &&  npm run -s copy:rexrep && npm run -s scss:bundle",
+    "copy:css": "cpy node_modules/@knight-lab/timelinejs/dist/css/timeline.css dist/scss/src --rename=timeline.scss --flat",
     "copy:js": "cpy node_modules/@knight-lab/timelinejs/dist/js/timeline.js dist/js --flat",
     "copy:ajs": "cpy contrib/js/autoload.js dist/js --flat",
-    "copy:font": "cpy node_modules/@knight-lab/timelinejs/dist/css/fonts/font.default.css dist/scss --rename=font.default.scss --flat",
+    "copy:font": "cpy node_modules/@knight-lab/timelinejs/dist/css/fonts/font.default.css dist/scss/src --rename=font.default.scss --flat",
     "copy:icons": "cpy node_modules/@knight-lab/timelinejs/dist/css/icons/tl-icons.* dist/icons --flat",
     "copy:rexrep": "rexreplace '../js/../css/icons/' '/icons/' dist/scss/timeline.scss",
+    "scss:bundle": "bundle-scss --config",
     "test": "npm run -s build",
     "upgrade": "npx npm-check-updates -u && npm run -s mod:update",
     "prepare": "node .husky/install.mjs"
+  },
+  "bundleStyle": {
+    "dest": "dist/scss/dist/timelinejs.scss",
+    "mask": "dist/scss/src/**/*.scss",
+    "sort": ["timeline", "font.default"]
   },
   "repository": {
     "type": "git",
@@ -49,6 +55,7 @@
     "@knight-lab/timelinejs": "^3.9.5",
     "@semantic-release/exec": "^6.0.3",
     "@semantic-release/git": "^10.0.1",
+    "bundle-scss": "^1.5.4",
     "commitizen": "^4.3.1",
     "cpy-cli": "^5.0.0",
     "cz-conventional-changelog": "^3.3.0",
