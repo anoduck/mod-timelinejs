@@ -32,7 +32,14 @@
 
 ![Logo](https://raw.githubusercontent.com/gethinode/hinode/main/static/img/logo.png)
 
-Hinode is a clean blog theme for [Hugo][hugo], an open-source static site generator. Hinode is available as a [template][repository_template], and a [main theme][repository]. This repository maintains a Hugo module to add KnightLab's timelinejs to a Hinode site. Visit the Hinode documentation site for [installation instructions][hinode_docs].
+---
+
+>[!WARNING]
+>Currently, use of this module will produce inconsistent results, therefore it should not be run in a production site until this issue is resolved.
+
+---
+
+Hinode is a clean blog theme for [Hugo][hugo], an open-source static site generator. Hinode is available as a [template][repository_template], and a [main theme][repository]. This repository maintains a Hugo module to add Knight-Lab's timelinejs features to a Hinode site. Visit the Hinode documentation site for [installation instructions][hinode_docs].
 
 ## Contributing
 
@@ -85,4 +92,4 @@ The shortcode can be used with the following labeled arguments.
 
 -----
 
-Don't worry, you can thank me later.
+This was not so fun.
