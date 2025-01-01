@@ -16,8 +16,8 @@
     source = "static"
     target = "static"
   [[module.mounts]]
-    source = "dist/scss/dist"
-    target = "assets/scss"
+    source = "dist/scss"
+    target = "assets/scss/modules/timelinejs"
   [[module.mounts]]
     source = "dist/js"
     target = "assets/js/modules/timelinejs"
@@ -28,7 +28,7 @@
     path = "github.com/gethinode/mod-utils/v2"
 
 [params.modules.timelinejs]
-  integration = "core"
+  integration = "optional"
 
 [params.modules.timelinejs.csp]
   [modules.timelinejs.csp]

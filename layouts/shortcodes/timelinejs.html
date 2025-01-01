@@ -21,7 +21,7 @@
 
 <!-- Define Variables -->
 {{- $blockId := .Get "blockId" | default "timeline-element" -}}
-{{- $jsonFile := .Get "jsonFile" | default "/timelinejs.json" -}}
+{{- $jsonFile := .Get "jsonFile" | default "data/timelinejs.json" -}}
 
 <!-- Inject div element -->
 <div class="tl-container" id="timeline-container">
