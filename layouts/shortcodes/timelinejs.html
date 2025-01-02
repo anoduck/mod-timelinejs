@@ -17,14 +17,14 @@
 
 <!-- Initialize arguments -->
 {{- $blockId := "" -}}
-{{- $jsonFile := "" -}}
+{{- $tlData := "" -}}
 
 <!-- Define Variables -->
 {{- $blockId := .Get "blockId" | default "timeline-element" -}}
-{{- $jsonFile := .Get "jsonFile" | default "data/timelinejs.json" -}}
+{{- $tlData := .Get "tlData" | default "data/timelinejs.json" -}}
 
 <!-- Inject div element -->
 <div class="tl-container" id="timeline-container">
-    <div id={{ $blockId | safeHTML }} data-name={{ $jsonFile | safeHTML }}></div>
+    <div id={{ $blockId | safeHTML }} data-name={{ $tlData | safeHTML }}></div>
 </div>
 

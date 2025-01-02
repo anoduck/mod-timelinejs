@@ -50,7 +50,7 @@ You can use a JSON file or a Google spreadsheet to provide the data, because the
 
 Data is stored in the `static` data in the form of a json file. More information about the format of the json file can be found on [KnightLab's webiste](https://timeline.knightlab.com/docs/json-format.html). The shortcode only takes two arguments, which are described below.
 
-To you a Google spreadsheet simply place the full url of the spreadsheet share link where you would place the json file, I.E. the `jsonFile` property. You can use [KnightLab's Template](https://docs.google.com/spreadsheets/d/1pHBvXN7nmGkiG8uQSUB82eNlnL8xHu6kydzH_-eguHQ/copy) to get started.
+To you a Google spreadsheet simply place the full url of the spreadsheet share link where you would place the json file, I.E. the `tlData` property. You can use [KnightLab's Template](https://docs.google.com/spreadsheets/d/1pHBvXN7nmGkiG8uQSUB82eNlnL8xHu6kydzH_-eguHQ/copy) to get started.
 
 ### BlockId
 
@@ -59,13 +59,13 @@ In order to tell the script where to generate the timeline, an "id" is provided.
 
 | Setting                   | Default            | Description                                         |
 |---------------------------|--------------------|-----------------------------------------------------|
-| jsonFile                  | "timelinejs.json"  | The JSON file or Google Sheet containing event data |
+| tlData                  | "timelinejs.json"  | The JSON file or Google Sheet containing event data |
 | blockId                   | "timeline-content" | The "id" attribute assigned to the timeline.        |
 
 The shortcode can be used with the following labeled arguments.
 
 ```html
-{{< timelinejs blockId="timeline-element" jsonFile="/timelinejs.json" >}}
+{{< timelinejs blockId="timeline-element" tlData="/timelinejs.json" >}}
 <!-- or -->
 {{< timelinejs "timeline-element" "/timelinejs.json" >}}
 ```
