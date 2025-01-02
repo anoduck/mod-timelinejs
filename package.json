@@ -1,6 +1,6 @@
 {
   "name": "@anoduck/mod-timelinejs",
-  "version": "0.0.68",
+  "version": "0.0.69",
   "description": "A Hinode Module to allow users of hinode to use the timelinejs library for more dynamic timelines.",
   "keywords": [
     "hugo",
