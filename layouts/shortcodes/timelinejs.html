@@ -16,15 +16,55 @@
 {{- $error := false -}}
 
 <!-- Initialize arguments -->
+{{- $file := . -}}
 {{- $blockId := "" -}}
 {{- $tlData := "" -}}
+{{- $dataAttr := "" -}}
+{{- $debug := "" | default false -}}
 
-<!-- Define Variables -->
-{{- $blockId := .Get "blockId" | default "timeline-element" -}}
-{{- $tlData := .Get "tlData" | default "data/timelinejs.json" -}}
+<!-- Set debug -->
+{{- if .Site.Params.modules.timelinejs.debug }}
+    {{- $debug = true -}}
+{{ end }}
+
+<!-- Check if named and Get -->
+{{- if .IsNamedParams }}
+    <!-- Define Variables -->
+    {{- $blockId = .Get "blockId" | default "timeline-element" -}}
+    {{- $tlData = .Get "tlData" -}}
+{{ else }}
+    {{- $blockId = .Get 0 | default "timeline-element" -}}
+    {{- $tlData = .Get 1 -}}
+{{ end }}
+
+<!-- define types -->
+{{- $jsonType := hasSuffix $tlData ".json" -}}
+{{- $htmlType := hasPrefix $tlData "https://docs.google.com/spreadsheets/" -}}
+
+<!-- test for types -->
+{{- if $jsonType }}
+    {{- $dataAttr = $tlData | urlize -}}
+{{ else if $htmlType }}
+    {{- $dataAttr = $tlData | safeURL -}}
+{{ else }}
+    {{ errorf "The %q shortcode requires a valid 'tlData' argument, which is either a valid JSON file or a Google Sheets URL. Please review your syntax on %s" $file.Name $file.Position }}
+    {{ errorf "tldata retrieved as %s" $tlData }}
+    {{ errorf "jsonType rendered as %s" $jsonType }}
+    {{ errorf "htmlType rendered as %s" $htmlType }}
+    {{ errorf "tldata rendered as %s" $dataAttr }}
+{{ end }}
 
 <!-- Inject div element -->
 <div class="tl-container" id="timeline-container">
-    <div id={{ $blockId | safeHTML }} data-name={{ $tlData | safeHTML }}></div>
+    <div id={{ $blockId | anchorize }} data-name={{ $dataAttr | safeHTML }} data-debug={{ $debug | safeHTML }}></div>
 </div>
 
+<!-- Provide debug information -->
+{{- if $debug }}
+    <p> The following values were used in the above timelinejs element</p>
+    <ul>
+        <li>Original Timeline Data = {{ $tlData }} </li>
+        <li>Block ID = {{ $blockId | safeHTML }}</li>
+        <li>Rendered Timeline Data = {{ $dataAttr  }} </li>
+    </ul>
+{{ end }}

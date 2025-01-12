@@ -1,15 +1,26 @@
-const tlCon = document.querySelector('#timeline-container');
-const tlObj = tlCon.querySelector('div:first-child');
-let blockId = tlObj.id;
-let tlData = tlObj.dataset.name;
-let scripts = document.getElementsByTagName('script');
-let jsPath = scripts[scripts.length-1].src;
+document.addEventListener('DOMContentLoaded', function() {
+    var tlCon = document.querySelector('#timeline-container');
+    var tlObj = tlCon.querySelector('div:first-child');
+    var blockId = tlObj.id;
+    var tlData = tlObj.dataset.name;
+    var debugData = tlObj.dataset.debug;
 
-let Options ={
-    script_path: jsPath,
-    debug: false
-};
+    if (debugData == 'true') {
+        var debugOn = true
+    } else {
+        var debugOn = false
+    };
 
-window.onload = function () {
-    window.timeline = new TL.Timeline(blockId, tlData);
-};
+    if (debugOn) {
+        console.log('blockID = ', blockId)
+        console.log('tlData = ', tlData)
+        console.log('Debug = ', debugOn)
+    };
+
+    var Options ={
+        debug: debugData,
+        lang: 'en',
+        height: 650,
+    };
+    window.timeline = new TL.Timeline(blockId, tlData, Options);
+})
