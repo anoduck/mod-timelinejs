@@ -16,15 +16,50 @@
 {{- $error := false -}}
 
 <!-- Initialize arguments -->
+{{- $file := . -}}
 {{- $blockId := "" -}}
 {{- $tlData := "" -}}
+{{- $dataAttr := "" -}}
 
-<!-- Define Variables -->
-{{- $blockId := .Get "blockId" | default "timeline-element" -}}
-{{- $tlData := .Get "tlData" | default "data/timelinejs.json" -}}
+<!-- Check if named and Get -->
+{{/* {{- if .IsNamedParams }}
+    <!-- Define Variables -->
+    {{- $blockId := .Get "blockId" | default "timeline-element" -}}
+    {{- $tlData := .Get "tlData" -}}
+{{ else }}
+    {{- $blockId := .Get 0 | default "timeline-element" -}}
+    {{- $tlData := .Get 1 -}}
+{{ end }} */}}
+
+{{- $blockId := $file.Get "blockId" | default "timeline-element" -}}
+{{- $tlData := $file.Get "tlData" -}}
+
+{{- $jsonType := hasSuffix $tlData ".json" -}}
+{{- $htmlType := hasPrefix $tlData "https://docs.google.com/spreadsheets/" -}}
+
+{{- if $jsonType }}
+    {{- $dataAttr := ref . $tlData -}}
+{{ else if $htmlType }}
+    {{- $dataAttr := $tlData | safeURL -}}
+{{ else }}
+    {{ errorf "The %q shortcode requires a valid 'tlData' argument, which is either a valid JSON file or a Google Sheets URL. Please review your syntax on %s" $file.Name $file.Position }}
+    {{ errorf "tldata started as %s" $tlData }}
+    {{ errorf "jsonType rendered as %s" $jsonType }}
+    {{ errorf "htmlType rendered as %s" $htmlType }}
+    {{ errorf "Value rendered as %s" $dataAttr }}
+{{ end }}
+
+<!-- Currently failed to render dur to the above block failing to evaluate correctly. -->
 
 <!-- Inject div element -->
 <div class="tl-container" id="timeline-container">
-    <div id={{ $blockId | safeHTML }} data-name={{ $tlData | safeHTML }}></div>
+    <div id={{ $blockId | anchorize }} data-name={{ $dataAttr | safeHTML }}></div>
 </div>
 
+<p> The following values were used in the above timelinejs element</p>
+<p>Resource type of {{ with $dataAttr }}{{ .ResourceType }}{{end}}</p>
+<ul>
+    <li>Original Data = {{ $tlData }} </li>
+    <li>Block ID = {{ $blockId | safeHTML }}</li>
+    <li>Data = {{ $dataAttr  }} </li>
+</ul>
