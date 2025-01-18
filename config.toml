@@ -24,8 +24,6 @@
   [[module.mounts]]
     source = "dist/icons"
     target = "static/icons"
-  [[module.imports]]
-    path = "github.com/gethinode/mod-utils/v2"
 
 [params.modules.timelinejs]
   integration = "optional"
