@@ -185,7 +185,7 @@ The shortcode can be used with the following labeled arguments, or without them 
 Using the shortcode in this manner is fairly straight forward. Just use the public URL of the spreadsheet in the
 `tlData` argument.
 
-````markdown
+```markdown
 
 {{< timelinejs blockId="timeline-id" tlData="https://docs.google.com/spreadsheets/u/1/d/1xuY4upIooEeszZ_lCmeNx24eSFWe0rHe9ZdqH2xqVNk/pubhtml" >}}
 
