@@ -67,4 +67,9 @@
         <li>Block ID = {{ $blockId | safeHTML }}</li>
         <li>Rendered Timeline Data = {{ $dataAttr  }} </li>
     </ul>
+    {{- if .Site.Params.enableDarkMode }}
+        <p>Dark Mode has been enabled for this site.</p>
+        <p class="d-none-dark">The current mode is: <mark>light mode</mark><p/>
+        <p class="d-none-light">The current mode is: <mark>dark mode</mark><p/>
+    {{ end }}
 {{ end }}

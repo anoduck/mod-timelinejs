@@ -27,7 +27,7 @@
 
 [params.modules.timelinejs]
   integration = "optional"
-  debug = false
+  debug = true
 
 [params.modules.timelinejs.csp]
   [modules.timelinejs.csp]
