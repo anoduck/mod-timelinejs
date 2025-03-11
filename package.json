@@ -48,7 +48,7 @@
   "devDependencies": {
     "@commitlint/cli": "^19.8.0",
     "@commitlint/config-conventional": "^19.8.0",
-    "@knight-lab/timelinejs": "^3.9.6",
+    "@knight-lab/timelinejs": "^3.9.7",
     "@semantic-release/exec": "^7.0.3",
     "@semantic-release/git": "^10.0.1",
     "commitizen": "^4.3.1",
